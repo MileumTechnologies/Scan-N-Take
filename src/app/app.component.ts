@@ -12,6 +12,7 @@ import { RouterService } from '../services/router.service';
 })
 export class MyApp {
   rootPage: any = LoginPage;
+  // rootPage: any = TabsPage;
 
   constructor(platform: Platform, private router: RouterService) {
     this.router.getRedirectEmitter().subscribe(

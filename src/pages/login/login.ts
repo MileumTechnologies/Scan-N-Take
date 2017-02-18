@@ -4,33 +4,8 @@ import { AlertController } from 'ionic-angular';
 import { RouterService } from '../../services/router.service';
 
 @Component({
-  templateUrl: 'login.html',
-  styles: [`
-    .login {
-      width: 100%;
-      margin: 0 auto;
-      position: relative;
-    }
-
-    .login-content {
-      width: 80%;
-      margin: 0 auto;
-    }
-
-    .login ion-input {
-      width: 100%;
-    }
-
-    .login-button {
-      margin-top: 20px;
-    }
-
-    .register-link-wrapper {
-      width: 100%;
-      margin-top: 20px;
-      text-align: center;
-    }
-  `]
+  selector: 'page-login',
+  templateUrl: 'login.html'
 })
 export class LoginPage {
   loggedIn: boolean = false;

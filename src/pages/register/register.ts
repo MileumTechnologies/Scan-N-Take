@@ -4,33 +4,8 @@ import { AlertController } from 'ionic-angular';
 import { RouterService } from '../../services/router.service';
 
 @Component({
-  templateUrl: 'register.html',
-  styles: [`
-    .register {
-      width: 100%;
-      margin: 0 auto;
-      position: relative;
-    }
-
-    .register-content {
-      width: 80%;
-      margin: 0 auto;
-    }
-
-    .register ion-input {
-      width: 100%;
-    }
-
-    .register-button {
-      margin-top: 20px;
-    }
-
-    .register-link-wrapper {
-      width: 100%;
-      margin-top: 20px;
-      text-align: center;
-    }
-  `]
+  selector: 'page-register',
+  templateUrl: 'register.html'
 })
 export class RegisterPage {
   name: string = null;
