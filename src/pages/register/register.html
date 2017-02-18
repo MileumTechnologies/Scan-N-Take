@@ -1,0 +1,43 @@
+<ion-content class='register no-scroll w3-animate-left' overflow-scroll="false">
+    <h2>
+      Register
+    </h2>
+
+    <form class='register-content' (ngSubmit)='attemptToRegister()'>
+
+      <ion-item class='name no-padding'>
+
+        <ion-label floating>Name</ion-label>
+        <ion-input [(ngModel)]='name' name='name'></ion-input>
+
+      </ion-item>
+
+      <ion-item class='username no-padding'>
+
+        <ion-label floating>Username</ion-label>
+        <ion-input [(ngModel)]='username' name='username'></ion-input>
+
+      </ion-item>
+
+      <ion-item class='email no-padding'>
+
+        <ion-label floating>Email</ion-label>
+        <ion-input type='email' [(ngModel)]='email' name='email'></ion-input>
+
+      </ion-item>
+
+      <ion-item class='password no-padding'>
+
+        <ion-label floating>Password</ion-label>
+        <ion-input type='password' [(ngModel)]='password' name='password'></ion-input>
+
+      </ion-item>
+
+      <button type='submit' class='register-button' ion-button full> Register </button>      
+
+    </form>
+
+    <div class='register-link-wrapper'>
+      <a (click)='redirectToLogin()'> or log in here if you're a member. </a> 
+    </div>
+</ion-content>
