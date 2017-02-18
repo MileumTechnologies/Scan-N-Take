@@ -10,4 +10,6 @@
 
 - Find a folder where you want to download the project and run `git clone https://github.com/anteAdamovic/FlamingMarshmallows.git`
 
-- Move inside the project folder and run either `ionic serve`(for web version) or `ionic serve --lab`(for mobile version)
+- Move inside the project folder and run `npm install`
+
+- Run either `ionic serve`(for web version) or `ionic serve --lab`(for mobile version)
