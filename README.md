@@ -1,6 +1,6 @@
 # FlamingMarshmallows
 
-# How to install development version
+### How to install development version
 
 - Download and install [Git](https://git-scm.com/download/win)
 
@@ -13,3 +13,15 @@
 - Move inside the project folder and run `npm install`
 
 - Run either `ionic serve`(for web version) or `ionic serve --lab`(for mobile version)
+
+### How to install android apk
+
+- Download and install Apk Installer from Play Store
+
+- Copy the .apk file from your PC to your android (anywhere on the device)
+
+- Open Apk Installer and go to Install APKs
+
+- Select and install desired APK
+
+- Open after installation or as a regular app
