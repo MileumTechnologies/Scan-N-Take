@@ -8,39 +8,39 @@
       <ion-item class='name no-padding'>
 
         <ion-label floating>Name</ion-label>
-        <ion-input [(ngModel)]='name' name='name'></ion-input>
+        <ion-input [(ngModel)]='user.name' name='name'></ion-input>
 
       </ion-item>
 
       <ion-item class='username no-padding'>
 
         <ion-label floating>Username</ion-label>
-        <ion-input [(ngModel)]='username' name='username'></ion-input>
+        <ion-input [(ngModel)]='user.username' name='username'></ion-input>
 
       </ion-item>
 
-      <ion-item class='email no-padding' [ngClass]="{'field-error': !validateEmail(email) && email}">
+      <ion-item class='email no-padding' [ngClass]="{'field-error': !validateEmail(user.email) && user.email}">
 
         <ion-label floating>Email</ion-label>
-        <ion-input type='text' [(ngModel)]='email' name='email'></ion-input>
+        <ion-input type='text' [(ngModel)]='user.email' name='email'></ion-input>
 
       </ion-item>
 
       <ion-item class='password no-padding'>
 
         <ion-label floating>Password</ion-label>
-        <ion-input type='password' [(ngModel)]='password' name='password'></ion-input>
+        <ion-input type='password' [(ngModel)]='user.password' name='password'></ion-input>
 
       </ion-item>
 
-      <ion-item class='repeat-password no-padding' [ngClass]="{'field-error': repeatPassword != password}">
+      <ion-item class='repeat-password no-padding' [ngClass]="{'field-error': user.repeatPassword != user.password}">
 
         <ion-label floating>Repeat Password</ion-label>
-        <ion-input type='password' [(ngModel)]='repeatPassword' name='repeatPassword'></ion-input>
+        <ion-input type='password' [(ngModel)]='user.repeatPassword' name='repeatPassword'></ion-input>
 
       </ion-item>
 
-      <button type='submit' class='register-button' [disabled]='!name || !username || !email || !password || !repeatPassword || (password != repeatPassword)' ion-button full> Register </button>      
+      <button type='submit' class='register-button' [disabled]='!user.name || !user.username || !user.email || !user.password || !user.repeatPassword || (user.password != user.repeatPassword)' ion-button full> Register </button>      
 
     </form>
 
