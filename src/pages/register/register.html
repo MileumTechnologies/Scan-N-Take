@@ -1,9 +1,9 @@
 <ion-content class='register no-scroll w3-animate-right' overflow-scroll="false">
-    <h2>
-      Register
-    </h2>
 
     <form class='register-content' (ngSubmit)='attemptToRegister()'>
+      <h2>
+        Register
+      </h2>
 
       <ion-item class='name no-padding'>
 
@@ -19,10 +19,10 @@
 
       </ion-item>
 
-      <ion-item class='email no-padding'>
+      <ion-item class='email no-padding' [ngClass]="{'field-error': !validateEmail(email) && email}">
 
         <ion-label floating>Email</ion-label>
-        <ion-input type='email' [(ngModel)]='email' name='email'></ion-input>
+        <ion-input type='text' [(ngModel)]='email' name='email'></ion-input>
 
       </ion-item>
 
@@ -33,7 +33,14 @@
 
       </ion-item>
 
-      <button type='submit' class='register-button' ion-button full> Register </button>      
+      <ion-item class='repeat-password no-padding' [ngClass]="{'field-error': repeatPassword != password}">
+
+        <ion-label floating>Repeat Password</ion-label>
+        <ion-input type='password' [(ngModel)]='repeatPassword' name='repeatPassword'></ion-input>
+
+      </ion-item>
+
+      <button type='submit' class='register-button' [disabled]='!name || !username || !email || !password || !repeatPassword || (password != repeatPassword)' ion-button full> Register </button>      
 
     </form>
 

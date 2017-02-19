@@ -12,6 +12,8 @@ export class RegisterPage {
   username: string = null;
   email: string = null;
   password: string = null;
+  repeatPassword: string = null;
+  passwordMatch: boolean = false;
 
   constructor(private alertCtrl: AlertController, private router: RouterService) {
 
@@ -33,5 +35,11 @@ export class RegisterPage {
       buttons: ['OK']
     });
     alert.present();
+  }
+
+  validateEmail(email) {
+    let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    console.log(re.test(email));
+    return re.test(email);
   }
 }
