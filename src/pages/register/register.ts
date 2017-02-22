@@ -31,8 +31,10 @@ export class RegisterPage {
     this.subscription = this.registerService.register(this.user)
       .subscribe((response) => {
 
+        // If error occured during registration
         if(response.error) {
 
+          // In case username is already taken
           if(response.usernameTaken) {
             let alert = this.alertCtrl.create({
               title: 'Registration Failed',
@@ -42,7 +44,8 @@ export class RegisterPage {
             alert.present();
           }
 
-          if(response.emailTaken) {
+          // In case email is already registered
+          else if(response.emailTaken) {
             let alert = this.alertCtrl.create({
               title: 'Registration Failed',
               subTitle: 'User with that email already exists, please pick a different email address.',
@@ -51,6 +54,17 @@ export class RegisterPage {
             alert.present();
           }
 
+          // In any other case of error
+          else {
+            let alert = this.alertCtrl.create({
+              title: 'Registration Failed',
+              subTitle: 'There was an error with your registration, please try again and if it fails contact our support.',
+              buttons: ['OK']
+            });
+            alert.present();
+          }
+
+        // If there was no error
         } else {
           let alert = this.alertCtrl.create({
             title: 'Registration Succesfull',
@@ -61,32 +75,6 @@ export class RegisterPage {
 
           this.redirectToLogin();
         }
-        // 
-        // } else if(!response.error && response.registerStatus && response.emailStatus){
-        //   let alert = this.alertCtrl.create({
-        //     title: 'Registration Succesfull',
-        //     subTitle: 'You have been succesfully registered, a verification email has been sent to given email address. Please verify your account.',
-        //     buttons: ['OK']
-        //   });
-        //   alert.present();
-
-        //   this.redirectToLogin();
-
-        // } else if(!response.error && response.registerStatus && !response.emailStatus){
-        //   let alert = this.alertCtrl.create({
-        //     title: 'Registration Succesfull',
-        //     subTitle: 'You have been succesfully registered, but verification email failed to send. Please contact our customer support with your account details.',
-        //     buttons: ['OK']
-        //   });
-        //   alert.present();
-        // } else {
-        //   let alert = this.alertCtrl.create({
-        //     title: 'Registration Failed',
-        //     subTitle: 'There has been an unknown error.',
-        //     buttons: ['OK']
-        //   });
-        //   alert.present();
-        // }
 
         this.subscription.unsubscribe();
       });

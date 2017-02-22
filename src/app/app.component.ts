@@ -35,6 +35,9 @@ export class MyApp {
       case 'register':
         this.rootPage = RegisterPage;
         break;
+      case 'home':
+        this.rootPage = TabsPage;
+        break;
       default:
         break;
     }

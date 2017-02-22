@@ -12,6 +12,10 @@ export class RouterService {
     this.redirect.emit('register');
   }
 
+  goToHomePage() {
+    this.redirect.emit('home');
+  }
+
   getRedirectEmitter(): EventEmitter<any> {
     return this.redirect;
   }
