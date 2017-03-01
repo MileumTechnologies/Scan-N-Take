@@ -12,15 +12,16 @@ import { LoginService } from '../../services/login.service';
 export class LoginPage {
   private subscription: any = null;
   loggedIn: boolean = false;
+  
   user: any = {
     password: null,
     username: null
   };
-
+  
   constructor( private alertCtrl: AlertController, private storage: Storage, private router: RouterService, private loginService: LoginService) {
 
     // Check if user is already logged in
-    storage.get('id').then(id => {
+    storage.get('id').then((id) => {
       if(id) this.redirectToHome();
     });
   }
@@ -28,7 +29,7 @@ export class LoginPage {
   login() {
     this.subscription = this.loginService.login(this.user)
       .subscribe((response) => {
-        if(response.error) {
+        if(!response.success) {
           
           if(response.incorrectUsername) {
 

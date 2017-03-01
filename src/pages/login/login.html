@@ -19,7 +19,7 @@
 
       </ion-item>
 
-      <button type='submit' class='login-button' ion-button full> Log In </button>      
+      <button type='submit' class='login-button' [disabled]='!user.username || !user.password' ion-button full> Log In </button>      
 
     </form>
 

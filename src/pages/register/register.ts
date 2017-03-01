@@ -32,7 +32,7 @@ export class RegisterPage {
       .subscribe((response) => {
 
         // If error occured during registration
-        if(response.error) {
+        if(!response.success) {
 
           // In case username is already taken
           if(response.usernameTaken) {
@@ -58,7 +58,7 @@ export class RegisterPage {
           else {
             let alert = this.alertCtrl.create({
               title: 'Registration Failed',
-              subTitle: 'There was an error with your registration, please try again and if it fails contact our support.',
+              subTitle: 'There was an error with your registration, please try again and if it fails contact our support. Error: ' + response.error,
               buttons: ['OK']
             });
             alert.present();
@@ -66,14 +66,26 @@ export class RegisterPage {
 
         // If there was no error
         } else {
-          let alert = this.alertCtrl.create({
-            title: 'Registration Succesfull',
-            subTitle: 'You have been succesfully registered, a verification email has been sent to ' + this.user.email + '. Please verify your account.',
-            buttons: ['OK']
-          });
-          alert.present();
+			
+			if(response.emailSent) {
+			  let alert = this.alertCtrl.create({
+				title: 'Registration Succesfull',
+				subTitle: 'You have been succesfully registered, a verification email has been sent to ' + this.user.email + '. Please verify your account.',
+				buttons: ['OK']
+			  });
+			  alert.present();
 
-          this.redirectToLogin();
+			  this.redirectToLogin();
+			}
+			
+			else if(!response.emailSent) {
+			let alert = this.alertCtrl.create({
+				title: 'Registration Succesfull',
+				subTitle: 'You have been succesfully registered, but for some reason verification email failed to send. Please verify your account manually by visiting ' + response.verificationLink + ' or contact support.',
+				buttons: ['OK']
+			  });
+			  alert.present();
+			}
         }
 
         this.subscription.unsubscribe();
