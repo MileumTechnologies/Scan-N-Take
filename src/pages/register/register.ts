@@ -13,15 +13,14 @@ export class RegisterPage {
 
   user: any = {
     name: null,
+    surname: null,
     username: null,
     email: null,
     password: null,
     repeatPassword: null
   };
 
-  constructor(private alertCtrl: AlertController, private router: RouterService, private registerService: RegisterService) {
-
-  }
+  constructor(private alertCtrl: AlertController, private router: RouterService, private registerService: RegisterService) { }
 
   redirectToLogin() {
     this.router.goToLoginPage();
