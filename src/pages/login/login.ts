@@ -94,3 +94,6 @@ export class LoginPage {
     this.router.goToHomePage();
   }
 }
+
+
+
