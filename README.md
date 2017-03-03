@@ -1,4 +1,4 @@
-# FlamingMarshmallows
+# Scan'n'Take
 
 ### How to install development version
 
