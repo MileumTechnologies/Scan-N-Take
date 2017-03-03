@@ -1,6 +1,10 @@
 {
-  "name": "ionic-hello-world",
-  "author": "Ionic Framework",
+  "name": "Scan'n'Take",
+  "author": "Ante Adamovic",
+  "contributors": [
+     { "Rebeka Gaspar Curman <gc.rebeka@gmail.com> (https://github.com/gcrebeka)" },
+     { "Jakov Horvat <jakovh97@gmail.com> (https://github.com/Yaaqovv)" }
+   ],
   "homepage": "http://ionicframework.com/",
   "private": true,
   "scripts": {
