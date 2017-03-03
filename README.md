@@ -8,7 +8,7 @@
 
 - Open command prompt (Windows Key + R, enter cmd and enter) and run `npm install -g ionic cordova`
 
-- Find a folder where you want to download the project and run `git clone https://github.com/anteAdamovic/FlamingMarshmallows.git`
+- Find a folder where you want to download the project and run `git clone https://github.com/anteAdamovic/Scan-n-Take.git`
 
 - Move inside the project folder and run `npm install`
 
