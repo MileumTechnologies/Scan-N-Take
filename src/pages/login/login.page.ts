@@ -86,12 +86,12 @@ export class LoginPage {
 
   redirectToRegister() {
     console.log('Redirecting to register page.');
-    this.router.goToRegisterPage();
+    this.router.changeRoot('register');
   }
 
   redirectToHome() {
     console.log('Redirecting to home page.');
-    this.router.goToHomePage();
+    this.router.changeRoot('home');
   }
 }
 

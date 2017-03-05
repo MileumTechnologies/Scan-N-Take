@@ -23,7 +23,7 @@ export class RegisterPage {
   constructor(private alertCtrl: AlertController, private router: RouterService, private registerService: RegisterService) { }
 
   redirectToLogin() {
-    this.router.goToLoginPage();
+    this.router.changeRoot('login');
   }
 
   register() {
