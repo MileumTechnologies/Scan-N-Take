@@ -5,8 +5,8 @@ import { RouterService } from '../../services/router.service';
 import { RegisterService } from '../../services/register.service';
 
 @Component({
-  selector: 'page-register',
-  templateUrl: 'register.html'
+  selector: 'register-page',
+  templateUrl: 'register.page.html'
 })
 export class RegisterPage {
   private subscription: any = null;
@@ -20,10 +20,10 @@ export class RegisterPage {
     repeatPassword: null
   };
 
-  constructor(private alertCtrl: AlertController, private router: RouterService, private registerService: RegisterService) { }
+  constructor(private alertCtrl: AlertController, private routerService: RouterService, private registerService: RegisterService) { }
 
   redirectToLogin() {
-    this.router.changeRoot('login');
+    this.routerService.changeRoot('login');
   }
 
   register() {
