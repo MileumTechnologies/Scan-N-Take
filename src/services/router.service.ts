@@ -3,7 +3,7 @@ import { NavController } from 'ionic-angular';
 
 import { LoginPage } from '../pages/login/login.page';
 import { RegisterPage } from '../pages/register/register.page';
-import { DashboardPage } from '../pages/dashboard/dashboard.page';
+import { HomePage } from '../pages/home/home.page';
 import { UnauthorizedPage } from '../pages/unauthorized/unauthorized.page';
 
 @Injectable()
@@ -43,8 +43,8 @@ export class RouterService {
                 break;
             }
 
-            case 'dashboard': {
-                this.changeRootEmitter.emit(DashboardPage);
+            case 'home': {
+                this.changeRootEmitter.emit(HomePage);
                 break;
             }
 
