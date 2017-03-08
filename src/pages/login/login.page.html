@@ -1,4 +1,8 @@
-<ion-content class='login w3-animate-left' overflow-scroll="false">
+<ion-content class='login w3-animate-bottom' overflow-scroll="false">
+
+    <div class='back'>
+        <a (click)='goBack()'>B</a>
+    </div>
 
     <form class='login-content' (ngSubmit)='login()'>
       <h2>  
@@ -23,7 +27,7 @@
 
     </form>
 
-    <div class='register-link-wrapper'>
+    <!--<div class='register-link-wrapper'>
       <a (click)='redirectToRegister()'> or register here if not a member. </a> 
-    </div>
+    </div>-->
 </ion-content>

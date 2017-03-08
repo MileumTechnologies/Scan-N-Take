@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
-import { AlertController } from 'ionic-angular';
+import { AlertController, NavController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 
-import { RouterService } from '../../services/router.service';
 import { LoginService } from '../../services/login.service';
+import { RouterService } from '../../services/router.service';
+
+import { RegisterPage } from '../register/register.page';
 
 @Component({
     selector: 'login-page',
@@ -18,13 +20,10 @@ export class LoginPage {
         username: null
     };
 
-    constructor(private alertCtrl: AlertController, private storage: Storage, private router: RouterService, private loginService: LoginService) { }
+    constructor(private alertCtrl: AlertController, private storage: Storage, private router: RouterService, private loginService: LoginService, private navController: NavController) { }
 
     ngOnInit() {
-        // Check if user is already logged in
-        this.storage.get('id').then((id) => {
-            if (id) this.redirectToHome();
-        });
+        console.log(this.navController);
     }
 
     login() {
@@ -85,14 +84,19 @@ export class LoginPage {
             });
     }
 
-    redirectToRegister() {
-        console.log('Redirecting to register page.');
-        this.router.changeRoot('register');
-    }
+    // redirectToRegister() {
+    //     // console.log('Redirecting to register page.');
+    //     // this.router.changeRoot('register');
+    //     this.navController.push(RegisterPage);
+    // }
 
     redirectToHome() {
-        console.log('Redirecting to home page.');
+        // console.log('Redirecting to home page.');
         this.router.changeRoot('home');
+    }
+
+    goBack() {
+        this.navController.pop();
     }
 }
 

@@ -4,6 +4,7 @@ import { Storage } from '@ionic/storage';
 import { MyApp } from './app.component';
 
 // Pages
+import { WelcomePage } from '../pages/welcome/welcome.page';
 import { LoginPage } from '../pages/login/login.page';
 import { RegisterPage } from '../pages/register/register.page';
 import { HomePage } from '../pages/home/home.page';
@@ -17,6 +18,7 @@ import { LoginService } from '../services/login.service';
 @NgModule({
     declarations: [
         MyApp,
+        WelcomePage,
         HomePage,
         LoginPage,
         RegisterPage,
@@ -28,6 +30,7 @@ import { LoginService } from '../services/login.service';
     bootstrap: [IonicApp],
     entryComponents: [
         MyApp,
+        WelcomePage,
         HomePage,
         LoginPage,
         RegisterPage,
