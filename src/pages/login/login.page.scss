@@ -1,24 +1,29 @@
-.login {
+login-page .login {
   width: 100%;
   margin: 0 auto;
   position: relative;
 }
 
-.login-content {
+login-page .login-content {
   width: 80%;
   margin: 0 auto;
 }
 
-.login ion-input {
+login-page .login ion-input {
   width: 100%;
 }
 
-.login-button {
+login-page .login-button {
   margin-top: 20px;
 }
 
-.register-link-wrapper {
+login-page .register-link-wrapper {
   width: 100%;
   margin-top: 20px;
   text-align: center;
+}
+
+login-page .back i {
+  font-size: 50px;
+  margin-left: 10px;
 }
