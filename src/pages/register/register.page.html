@@ -1,4 +1,4 @@
-<ion-content class='register w3-animate-bottom' overflow-scroll="false">
+<ion-content class='register w3-animate-bottom background' overflow-scroll="false">
 
     <div class='back'>
         <a (click)='goBack()'>
@@ -11,17 +11,10 @@
         Register
       </h2>
 
-      <ion-item class='name no-padding'>
+      <ion-item class='full-name no-padding'>
 
-        <ion-label floating>Name</ion-label>
-        <ion-input [(ngModel)]='user.name' name='name'></ion-input>
-
-      </ion-item>
-
-      <ion-item class='name no-padding'>
-
-        <ion-label floating>Surname</ion-label>
-        <ion-input [(ngModel)]='user.surname' name='surname'></ion-input>
+        <ion-label floating>Full Name</ion-label>
+        <ion-input [(ngModel)]='user.fullName' name='fullName'></ion-input>
 
       </ion-item>
 
@@ -46,16 +39,29 @@
 
       </ion-item>
 
-      <ion-item class='repeat-password no-padding' [ngClass]="{'field-error': user.repeatPassword != user.password}">
-
-        <ion-label floating>Repeat Password</ion-label>
-        <ion-input type='password' [(ngModel)]='user.repeatPassword' name='repeatPassword'></ion-input>
-
-      </ion-item>
-
-      <button type='submit' class='register-button' [disabled]='!user.name || !user.username || !user.email || !user.password || !user.repeatPassword || (user.password != user.repeatPassword)' ion-button full> Register </button>      
+      <div class='register-button-wrapper'>
+        <button type='submit' class='register-button' [disabled]='!user.fullName || !user.email || !user.password || !user.password'> Register </button>      
+      </div>
 
     </form>
+
+    <div class='or'>
+        <p> OR </p>
+    </div>
+
+    <div class='googleSU-button-wrapper'>
+      <button class='googleSU-button'>
+         <i class="fa fa-google" aria-hidden="true"></i>
+         <p> Sign up with Google </p>
+      </button>
+    </div>
+
+    <div class='facebookSU-button-wrapper'>
+      <button class='facebookSU-button'>
+         <i class="fa fa-facebook" aria-hidden="true"></i>
+         <p> Sign up with Facebook </p>
+      </button>
+    </div>
 
     <!--<div class='register-link-wrapper'>
       <a (click)='redirectToLogin()'> or log in here if you're a member. </a> 
