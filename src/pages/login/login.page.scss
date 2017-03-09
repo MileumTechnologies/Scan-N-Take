@@ -9,12 +9,63 @@ login-page .login-content {
   margin: 0 auto;
 }
 
+h2 {
+    text-align: right;
+    font-size: 27px;
+    color: #FFF;
+    margin-top: -35px;
+    margin-bottom: 60px;
+}
+
+login-page .username {
+    background-color: rgba(255, 0, 0, 0);
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+login-page .password {
+    background-color: rgba(255, 0, 0, 0);
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+login-page .forgot-pass {
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+a {
+  color: #FFF;
+  font-size: 15px;
+}
+
 login-page .login ion-input {
   width: 100%;
 }
 
+login-page .login-button-wrapper {
+  width: 100%;
+  text-align: center;
+}
+
 login-page .login-button {
   margin-top: 20px;
+  width: 240px;
+  height: 45px;
+  background: #FFF;
+  border: 1px solid #FFF;
+  border-radius: 5px;
+  box-shadow: 0px 0px 7px -1px #000;
+  color: #8bc34a;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+login-page .or {
+  font-size: 18px;
+  color: #FFF;
+  text-align: center;
 }
 
 login-page .register-link-wrapper {
@@ -25,5 +76,13 @@ login-page .register-link-wrapper {
 
 login-page .back i {
   font-size: 50px;
-  margin-left: 10px;
+  margin-left: 15px;
+  margin-top: 5px;
+  color: #FFF;
+}
+
+login-page .background {
+  background-image: url("../../assets/background/background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }

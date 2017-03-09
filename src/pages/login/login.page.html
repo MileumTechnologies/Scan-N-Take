@@ -1,4 +1,4 @@
-<ion-content class='login w3-animate-bottom' overflow-scroll="false">
+<ion-content class='login w3-animate-bottom background' overflow-scroll="false">
 
     <div class='back'>
         <a (click)='goBack()'>
@@ -8,7 +8,7 @@
 
     <form class='login-content' (ngSubmit)='login()'>
       <h2>  
-        Login
+        Log in
       </h2>
       
       <ion-item class='username no-padding'>
@@ -25,9 +25,19 @@
 
       </ion-item>
 
-      <button type='submit' class='login-button' [disabled]='!user.username || !user.password' ion-button full> Log In </button>      
+      <div class='forgot-pass'> <a href='#'> Forgot password? </a> </div>
+
+      <div class='login-button-wrapper'>
+        <button type='submit' class='login-button' [disabled]='!user.username || !user.password' ion-button full> Log In </button> 
+      </div>     
 
     </form>
+
+    <div class='or'>
+        <p> OR </p>
+    </div>
+
+
 
     <!--<div class='register-link-wrapper'>
       <a (click)='redirectToRegister()'> or register here if not a member. </a> 
