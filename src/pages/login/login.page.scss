@@ -1,24 +1,155 @@
-.login {
+login-page .login {
   width: 100%;
   margin: 0 auto;
   position: relative;
 }
 
-.login-content {
+login-page .login-content {
   width: 80%;
   margin: 0 auto;
 }
 
-.login ion-input {
+h2 {
+    text-align: right;
+    font-size: 27px;
+    color: #FFF;
+    margin-top: -35px;
+    margin-bottom: 60px;
+}
+
+login-page .username {
+    background-color: rgba(255, 0, 0, 0);
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+login-page .password {
+    background-color: rgba(255, 0, 0, 0);
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+login-page .forgot-pass {
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+login-page .forgot-pass a {
+  color: #FFF;
+  font-size: 15px;
+}
+
+login-page .login ion-input {
   width: 100%;
 }
 
-.login-button {
-  margin-top: 20px;
+login-page .login-button-wrapper {
+  width: 100%;
+  text-align: center;
 }
 
-.register-link-wrapper {
+login-page .login-button {
+  margin-top: 30px;
+  width: 240px;
+  height: 45px;
+  background: #FFF;
+  border: 1px solid #FFF;
+  border-radius: 5px;
+  box-shadow: 0px 0px 7px -1px #000;
+  color: #8bc34a;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+login-page .or {
+  font-size: 18px;
+  color: #FFF;
+  text-align: center;
+  margin-top: 30px;
+}
+
+login-page .register-link-wrapper {
   width: 100%;
   margin-top: 20px;
   text-align: center;
+}
+
+login-page .back i {
+  font-size: 50px;
+  margin-left: 15px;
+  margin-top: 5px;
+  color: #FFF;
+}
+
+login-page .background {
+  background-image: url("../../assets/background/background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+login-page .googleLI-button-wrapper {
+  width: 100%;
+  text-align: center;
+}
+
+login-page .google-login-button i {
+text-align: left;
+color: #FFF;
+padding-right: 35px;
+}
+
+login-page .google-login-button p {
+color: #FFF;
+display: inline;
+padding-right: 40px;
+}
+
+login-page .google-login-button {
+  width: 240px;
+  height: 45px;
+  background: #df482e;
+  border: 1px solid #df482e;
+  border-radius: 5px;
+  box-shadow: 0px 0px 7px -1px #000;
+  margin-top: 10px;
+}
+
+login-page .facebookLI-button-wrapper {
+  width: 100%;
+  text-align: center;
+  margin-top: 15px;
+}
+
+login-page .facebook-login-button i {
+text-align: left;
+color: #FFF;
+padding-right: 32px;
+}
+
+login-page .facebook-login-button p {
+color: #FFF;
+display: inline;
+padding-right: 35px;
+}
+
+login-page .facebook-login-button {
+  width: 240px;
+  height: 45px;
+  background: #3c66c4;
+  border: 1px solid #3c66c4;
+  border-radius: 5px;
+  box-shadow: 0px 0px 7px -1px #000;
+}
+
+login-page .signIn-ToS {
+  margin-top: 40px;
+  margin-left: 10px;
+  margin-right: 10px; 
+  color: #FFF;
+}
+
+login-page .signIn-ToS p a {
+  color: #FFF;
+  font-size: 14px;
 }
