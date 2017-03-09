@@ -9,13 +9,62 @@ register-page .register-content {
   margin: 0 auto;
 }
 
+h2 {
+    text-align: right;
+    font-size: 27px;
+    color: #FFF;
+    margin-top: -35px;
+    margin-bottom: 50px;
+}
+
+register-page .background {
+  background-image: url("../../assets/background/background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+register-page .back i {
+  font-size: 50px;
+  margin-left: 15px;
+  margin-top: 5px;
+  color: #FFF;
+}
+
+register-page .full-name, .username, .email, .password, .repeat-password {
+  background-color: rgba(255, 0, 0, 0);
+    border-bottom: 1px solid white;
+    color: white;
+}
+
 register-page .register ion-input {
   width: 100%;
 }
 
 register-page .register-button {
   margin-top: 20px;
+  width: 240px;
+  height: 45px;
+  background: #FFF;
+  border: 1px solid #FFF;
+  border-radius: 5px;
+  box-shadow: 0px 0px 7px -1px #000;
+  color: #8bc34a;
+  font-weight: bold;
+  font-size: 16px;
 }
+
+register-page .register-button-wrapper {
+  width: 100%;
+  text-align: center;
+}
+
+register-page .or {
+  font-size: 18px;
+  color: #FFF;
+  text-align: center;
+  margin-top: 30px;
+}
+
 
 register-page .register-link-wrapper {
   width: 100%;
@@ -32,4 +81,58 @@ register-page .field-error .item-inner {
 register-page .back i {
   font-size: 50px;
   margin-left: 10px;
+}
+
+register-page .googleSU-button-wrapper {
+  width: 100%;
+  text-align: center;
+}
+
+register-page .googleSU-button i {
+  text-align: left;
+  color: #FFF;
+  padding-right: 35px;
+}
+
+register-page .googleSU-button p {
+  color: #FFF;
+  display: inline;
+  padding-right: 40px;
+}
+
+register-page .googleSU-button {
+  width: 240px;
+  height: 45px;
+  background: #df482e;
+  border: 1px solid #df482e;
+  border-radius: 5px;
+  box-shadow: 0px 0px 7px -1px #000;
+  margin-top: 10px;
+}
+
+register-page .facebookSU-button-wrapper {
+  width: 100%;
+  text-align: center;
+  margin-top: 15px;
+}
+
+register-page .facebookSU-button i {
+  text-align: left;
+  color: #FFF;
+  padding-right: 32px;
+}
+
+register-page .facebookSU-button p {
+  color: #FFF;
+  display: inline;
+  padding-right: 35px;
+}
+
+register-page .facebookSU-button {
+  width: 240px;
+  height: 45px;
+  background: #3c66c4;
+  border: 1px solid #3c66c4;
+  border-radius: 5px;
+  box-shadow: 0px 0px 7px -1px #000;
 }

@@ -13,12 +13,10 @@ export class RegisterPage {
     private subscription: any = null;
 
     user: any = {
-        name: null,
-        surname: null,
+        fullName: null,
         username: null,
         email: null,
-        password: null,
-        repeatPassword: null
+        password: null
     };
 
     constructor(private alertCtrl: AlertController, private registerService: RegisterService, private navController: NavController) { }
