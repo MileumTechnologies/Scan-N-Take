@@ -1,3 +1,7 @@
+register-page .register-form-wrapper {
+  margin-top: 90px;
+}
+
 register-page .register {
   width: 100%;
   margin: 0 auto;
@@ -9,25 +13,10 @@ register-page .register-content {
   margin: 0 auto;
 }
 
-h2 {
-    text-align: right;
-    font-size: 27px;
-    color: #FFF;
-    margin-top: -35px;
-    margin-bottom: 50px;
-}
-
 register-page .background {
   background-image: url("../../assets/background/background.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
-}
-
-register-page .back i {
-  font-size: 50px;
-  margin-left: 15px;
-  margin-top: 5px;
-  color: #FFF;
 }
 
 register-page .full-name, .username, .email, .password, .repeat-password {
