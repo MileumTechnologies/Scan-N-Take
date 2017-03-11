@@ -12,8 +12,8 @@ import { RegisterPage } from '../register/register.page';
     templateUrl: 'login.page.html'
 })
 export class LoginPage {
+    static title: string = 'Log In';
     private subscription: any = null;
-    loggedIn: boolean = false;
 
     user: any = {
         password: null,

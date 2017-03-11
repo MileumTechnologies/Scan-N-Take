@@ -10,6 +10,7 @@ import { LoginPage } from '../login/login.page';
     templateUrl: 'register.page.html'
 })
 export class RegisterPage {
+    static title: string = 'Register';
     private subscription: any = null;
 
     user: any = {

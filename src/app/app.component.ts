@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Platform } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { Platform, NavController } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 import { Storage } from '@ionic/storage';
 
@@ -12,6 +12,7 @@ import { RouterService } from '../services/router.service';
     templateUrl: 'app.html'
 })
 export class MyApp {
+    @ViewChild('nav') nav: NavController
     rootPage: any = WelcomePage;
 
     constructor(platform: Platform, private routerService: RouterService, private storage: Storage) {
