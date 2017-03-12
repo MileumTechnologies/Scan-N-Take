@@ -66,7 +66,7 @@ export class LoginPage {
                         });
                         alert.present();
 
-                        this.storage.set('id', response.id);
+                        localStorage.setItem('id', response.id);
                         this.redirectToHome();
                     } else if (response.verified == 0) {
                         let alert = this.alertCtrl.create({

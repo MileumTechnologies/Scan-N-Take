@@ -59,4 +59,9 @@ export class MyApp {
             }
         }
     }
+
+    logout() {
+        localStorage.removeItem('id');
+        this.changeRootPage('welcome');
+    }
 }

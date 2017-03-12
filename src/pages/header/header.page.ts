@@ -1,6 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { App } from 'ionic-angular';
 
+import { RouterService } from '../../services/router.service';
+
 @Component({
     selector: 'header-page',
     templateUrl: './header.page.html'
@@ -9,7 +11,7 @@ export class HeaderPage {
     @Input() menuContent: any;
     private navCtrl: any;
 
-    constructor(private app: App) { }
+    constructor(private app: App, private router: RouterService) { }
 
     ngAfterViewInit() {
         this.navCtrl = this.app.getRootNav();
@@ -38,7 +40,7 @@ export class HeaderPage {
     }
 
     isWelcomePage(): boolean {
-        if(!this.navCtrl)
+        if (!this.navCtrl)
             return true;
 
         if (this.isRootPage() && this.navCtrl._views[0].component.name === 'WelcomePage')
@@ -48,8 +50,8 @@ export class HeaderPage {
     }
 
     userLoggedIn(): boolean {
-        // if(localStorage.getItem('id') != undefined) 
+        if (localStorage.getItem('id'))
             return true;
-        // return false;
+        return false;
     }
 }

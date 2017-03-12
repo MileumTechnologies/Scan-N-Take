@@ -10,9 +10,11 @@ import { RouterService } from '../../services/router.service';
     templateUrl: 'welcome.page.html'
 })
 export class WelcomePage {
-    
-    constructor(private navController: NavController, private routerService: RouterService) {
-        if(localStorage.getItem('loggedIn')) {
+
+    constructor(private navController: NavController, private routerService: RouterService) { }
+
+    ngAfterViewInit() {
+        if (localStorage.getItem('id')) {
             this.routerService.changeRoot('home');
         }
     }
