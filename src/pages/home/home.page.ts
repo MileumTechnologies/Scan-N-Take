@@ -3,6 +3,7 @@ import { Storage } from '@ionic/storage';
 
 import { RouterService } from '../../services/router.service';
 @Component({
+    selector: 'home-page',
     templateUrl: 'home.page.html'
 })
 export class HomePage {

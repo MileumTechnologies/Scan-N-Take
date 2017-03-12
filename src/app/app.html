@@ -1,3 +1,11 @@
 <!-- If header-page is before ion-nav it won't properly load app reference -->
 <ion-nav #nav [root]="rootPage"></ion-nav>
 <header-page></header-page>
+<ion-menu side='right' [content]='nav'>
+    <ion-content>
+        <ion-list>
+            <p> Settings </p>
+            <p> Logout </p>
+        </ion-list>
+    </ion-content>
+</ion-menu>

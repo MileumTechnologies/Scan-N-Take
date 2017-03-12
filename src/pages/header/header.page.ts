@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { App } from 'ionic-angular';
 
 @Component({
@@ -6,6 +6,7 @@ import { App } from 'ionic-angular';
     templateUrl: './header.page.html'
 })
 export class HeaderPage {
+    @Input() menuContent: any;
     private navCtrl: any;
 
     constructor(private app: App) { }
@@ -47,6 +48,8 @@ export class HeaderPage {
     }
 
     userLoggedIn(): boolean {
-        return false;
+        // if(localStorage.getItem('id') != undefined) 
+            return true;
+        // return false;
     }
 }
