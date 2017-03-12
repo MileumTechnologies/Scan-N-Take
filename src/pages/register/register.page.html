@@ -1,15 +1,7 @@
 <ion-content class='register w3-animate-bottom background' overflow-scroll="false">
 
-    <div class='back'>
-        <a (click)='goBack()'>
-          <i class="fa fa-angle-left" aria-hidden="true"></i>
-        </a>
-    </div>
-
+  <div class='register-form-wrapper'>
     <form class='register-content' (ngSubmit)='register()'>
-      <h2>
-        Register
-      </h2>
 
       <ion-item class='full-name no-padding'>
 
@@ -45,6 +37,8 @@
 
     </form>
 
+  </div>
+  
     <div class='or'>
         <p> OR </p>
     </div>

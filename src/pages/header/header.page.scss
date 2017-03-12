@@ -7,9 +7,22 @@ header-page .back-wrapper {
     float: left;
 }
 
+header-page .back-wrapper i {
+	font-size: 50px;
+	margin-left: 15px;
+	margin-top: 5px;
+	color: #FFF;
+}
+
 header-page .title-wrapper {
     width: 100%;
     text-align: center;
+}
+
+header-page .title {
+	font-size: 27px;
+    color: #FFF;
+    margin-top: 15px;
 }
 
 header-page .menu-wrapper {
