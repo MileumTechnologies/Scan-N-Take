@@ -1,0 +1,13 @@
+
+<div class="container" *ngIf="show">
+	<section class="main">
+		<h2>{{title}}</h2>
+		<article>
+			{{message}}
+		</article>
+		<div class="btn-group">
+			<button *ngFor="let button of buttons"><p>|</p></button>
+		</div>	
+	</section>
+</div>
+
