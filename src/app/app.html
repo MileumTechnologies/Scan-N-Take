@@ -1,1 +1,20 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<!-- If header-page is before ion-nav it won't properly load app reference -->
+
+<!-- Main navigation -->
+<ion-nav #nav [root]="rootPage"></ion-nav>
+
+<!-- Header -->
+<header-page></header-page>
+
+<!-- Popout menu template -->
+<ion-menu side='right' [content]='nav'>
+    <ion-content>
+        <ion-list>
+            <p> Settings -- Text</p>
+            <button ion-item (click)="logout()" menuClose>
+                Logout
+            </button>
+
+        </ion-list>
+    </ion-content>
+</ion-menu>

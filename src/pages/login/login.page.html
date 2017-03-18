@@ -1,15 +1,7 @@
 <ion-content class='login w3-animate-bottom background' overflow-scroll="false">
 
-    <div class='back'>
-        <a (click)='goBack()'>
-          <i class="fa fa-angle-left" aria-hidden="true"></i>
-        </a>
-    </div>
-
+  <div class='login-form-wrapper'>
     <form class='login-content' (ngSubmit)='login()'>
-      <h2>  
-        Log in
-      </h2>
       
       <ion-item class='username no-padding'>
 
@@ -32,6 +24,7 @@
       </div>     
 
     </form>
+  </div>
 
     <div class='or'>
         <p> OR </p>
@@ -51,7 +44,7 @@
       </button>
     </div>
 
-    <div class='signIn-ToS'>
+  <!---  <div class='signIn-ToS'>
       <p> By signing in, I agree to Scan'N'Take's 
         <a href='#'>Terms of Service </a>, 
         <a href='#'> Non-Discrimination Policy </a>,
@@ -60,7 +53,7 @@
         <a href='#'> Shop Refund Policy </a>, and 
         <a href='#'> Host Guarantee Terms </a>. 
       </p>
-    </div>
+    </div> ---->
 
     <!--<div class='register-link-wrapper'>
       <a (click)='redirectToRegister()'> or register here if not a member. </a> 
