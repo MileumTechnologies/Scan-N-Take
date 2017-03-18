@@ -1,7 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, EventEmitter } from '@angular/core';
 import { App } from 'ionic-angular';
 
 import { RouterService } from '../../services/router.service';
+import { AlertComponent } from '../alert/alert.page';
 
 @Component({
     selector: 'header-page',
@@ -10,13 +11,14 @@ import { RouterService } from '../../services/router.service';
 export class HeaderPage {
     @Input() menuContent: any;
     private navCtrl: any;
+    private emitter: EventEmitter<any>;
 
     constructor(private app: App, private router: RouterService) { }
 
     ngAfterViewInit() {
         this.navCtrl = this.app.getRootNav();
-        console.log('NavCtrl: ', this.navCtrl);
-        console.log('Test: ', this.navCtrl._views[0].component);
+        // console.log('NavCtrl: ', this.navCtrl);
+        // console.log('Test: ', this.navCtrl._views[0].component);
     }
 
     goBack() {

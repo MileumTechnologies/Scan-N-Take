@@ -1,5 +1,5 @@
-html{
-  position:relative; 
+/*html{
+  position:relative;
  }
 
 .container{
@@ -16,7 +16,7 @@ html{
     margin: 0 auto;
     margin-top: 50px;
     position: relative;
-    
+
 }
 .main h2 {
     color: #5cd65c;
@@ -33,7 +33,7 @@ html{
 }
 .main .btn-group button {
     background-color: #4CAF50; /* Green */
-    border: none;
+    /*border: none;
     color: white;
     float: left;
     width: 50%;
@@ -52,7 +52,7 @@ html{
 }
 .main .btn-group p {
     background-color: #4CAF50; /* Green */
-    border: none;
+    /*border: none;
     color: white;
     float: left;
     width: 5%;
@@ -63,13 +63,19 @@ html{
     cursor: pointer;
     margin: 0px;
     padding: 0px;
-}
-.main .btn-group:last-child {
+}*/
+/*.main .btn-group:last-child {
     border-right: none;
     border-radius: 0 0 16px 0;
 }
 .main .btn-group:first:child {
     border-right: none;
     border-radius: 0 0 0 16px;
+}*//*/
+*/
+alert-page {
+  position: absolute;
+  top: 50px;
+  left: 20%;
+  width: 60%;
 }
-

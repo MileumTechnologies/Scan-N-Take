@@ -1,5 +1,7 @@
 <div class='header' *ngIf='!isWelcomePage()'>
 
+    <alert-page></alert-page>
+
     <div class='back-wrapper' *ngIf='!isRootPage()'>
         <a (click)='goBack()'>
             <i class="fa fa-angle-left" aria-hidden="true"></i>

@@ -7,6 +7,7 @@ import { WelcomePage } from '../pages/welcome/welcome.page';
 import { HomePage } from '../pages/home/home.page';
 import { ErrorPage } from '../pages/error/error.page';
 import { RouterService } from '../services/router.service';
+import { AlertComponent } from '../pages/alert/alert.page';
 
 @Component({
     templateUrl: 'app.html'
@@ -45,7 +46,7 @@ export class MyApp {
             // case 'register': {
             //     this.rootPage = RegisterPage;
             //     break;
-            // } 
+            // }
             case 'welcome': {
                 this.rootPage = WelcomePage;
                 break;

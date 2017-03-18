@@ -10,11 +10,13 @@ import { RegisterPage } from '../pages/register/register.page';
 import { HomePage } from '../pages/home/home.page';
 import { ErrorPage } from '../pages/error/error.page';
 import { HeaderPage } from '../pages/header/header.page';
+import { AlertComponent } from '../pages/alert/alert.page';
 
 // Services
 import { RouterService } from '../services/router.service';
 import { RegisterService } from '../services/register.service';
 import { LoginService } from '../services/login.service';
+import { AlertService } from '../services/alert.service';
 
 @NgModule({
     declarations: [
@@ -24,7 +26,8 @@ import { LoginService } from '../services/login.service';
         LoginPage,
         RegisterPage,
         ErrorPage,
-        HeaderPage
+        HeaderPage,
+        AlertComponent
     ],
     imports: [
         IonicModule.forRoot(MyApp)
@@ -37,10 +40,11 @@ import { LoginService } from '../services/login.service';
         LoginPage,
         RegisterPage,
         ErrorPage,
-        HeaderPage
+        HeaderPage,
+        AlertComponent
     ],
     providers: [
-        Storage, RouterService, RegisterService, LoginService,
+        Storage, RouterService, RegisterService, LoginService, AlertService,
         { provide: ErrorHandler, useClass: IonicErrorHandler },]
 })
 export class AppModule { }

@@ -1,4 +1,3 @@
-
 <div class="container" *ngIf="show">
 	<section class="main">
 		<h2>{{title}}</h2>
@@ -6,8 +5,9 @@
 			{{message}}
 		</article>
 		<div class="btn-group">
-			<button *ngFor="let button of buttons"><p>|</p></button>
-		</div>	
+      <div class='btn' *ngFor="let button of buttons">
+			  <div (click)='buttonClick(button)'>{{button}}</div>
+      </div>
+		</div>
 	</section>
 </div>
-

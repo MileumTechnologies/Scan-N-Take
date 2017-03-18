@@ -1,15 +1,41 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter } from '@angular/core';
 
+import { AlertService } from '../../services/alert.service';
 
 @Component({
   selector: 'alert-page',
-  templateUrl: './alert.page.html',
-  styleUrls: ['./alert.page.css']
+  templateUrl: './alert.page.html'
 })
 
 export class AlertComponent {
-	title = 'Alert';
-	message = 'Lorem ipsum dolor sit amet, et massa sed libero scelerisque per, mollis volutpat magna dictum ante consequat. Pellentesque in, lorem fusce et tellus justo tristique, diam mi in sed.';
-	button1 = 'OK';
-	button2 = 'Cancel';
+  private emitter: EventEmitter<any>;
+  public show: boolean = false;
+	public title: string;
+	public message: string;
+  public buttons: any[];
+
+  constructor(private alertService: AlertService) {
+    this.emitter = this.alertService.getAlertEmitter();
+    this.emitter.subscribe(
+      (event) => {
+        this.title = event.title;
+        this.message = event.message;
+        this.buttons = event.buttons;
+        this.display();
+      }
+    );
+  }
+
+  public buttonClick(buttonName) {
+    console.log('Alert button clicked ', buttonName);
+    this.hide();
+  }
+
+  public display() {
+    this.show = true;
+  }
+
+  public hide() {
+    this.show = false;
+  }
 }

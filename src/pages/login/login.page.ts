@@ -4,6 +4,7 @@ import { Storage } from '@ionic/storage';
 
 import { LoginService } from '../../services/login.service';
 import { RouterService } from '../../services/router.service';
+import { AlertService } from '../../services/alert.service';
 
 import { RegisterPage } from '../register/register.page';
 
@@ -20,7 +21,7 @@ export class LoginPage {
         username: null
     };
 
-    constructor(private alertCtrl: AlertController, private storage: Storage, private router: RouterService, private loginService: LoginService, private navController: NavController) { }
+    constructor(private alertCtrl: AlertController, private storage: Storage, private router: RouterService, private loginService: LoginService, private navController: NavController, private alertService: AlertService) { }
 
     ngOnInit() {
         console.log(this.navController);
@@ -32,21 +33,32 @@ export class LoginPage {
                 if (!response.success) {
 
                     if (response.incorrectUsername) {
-
-                        let alert = this.alertCtrl.create({
-                            title: 'Login Failed',
-                            subTitle: 'Can\'t find a user with given username.',
-                            buttons: ['OK']
-                        });
-                        alert.present();
+                        let alertData = {
+                          title: 'Login Failed',
+                          message: 'Username is incorrect.',
+                          buttons: ['Ok', 'Cancel']
+                        };
+                        this.alertService.getAlertEmitter().emit(alertData);
+                        // let alert = this.alertCtrl.create({
+                        //     title: 'Login Failed',
+                        //     subTitle: 'Can\'t find a user with given username.',
+                        //     buttons: ['OK']
+                        // });
+                        // alert.present();
 
                     } else if (response.incorrectPassword) {
-                        let alert = this.alertCtrl.create({
-                            title: 'Login Failed',
-                            subTitle: 'Incorrect password.',
-                            buttons: ['OK']
-                        });
-                        alert.present();
+                      let alertData = {
+                        title: 'Login Failed',
+                        message: 'Password is incorrect.',
+                        buttons: ['OK']
+                      };
+                      this.alertService.getAlertEmitter().emit(alertData);
+                        // let alert = this.alertCtrl.create({
+                        //     title: 'Login Failed',
+                        //     subTitle: 'Incorrect password.',
+                        //     buttons: ['OK']
+                        // });
+                        // alert.present();
                     } else {
                         let alert = this.alertCtrl.create({
                             title: 'Login Failed',
@@ -101,4 +113,3 @@ export class LoginPage {
 }
 
 // rebeka je zakon
-
