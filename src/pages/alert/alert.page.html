@@ -1,28 +1,13 @@
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-</head>
-<body>
-<div class="container">
-			<section class="main">
-				<h2>{{title}}</h2>
-				<article>
-					{{message}}
-				</article>
-				<div class="btn-group">
-				  <button class="button1">{{button1}}<p>|</p></button>
-				  <button class="button2">{{button2}}</button>
-				</div>	
-			</section>
-			<section class="main2">
-				<h2>Alert!</h2>
-				<article>
-					Lorem ipsum dolor sit amet, et massa sed libero scelerisque per, mollis volutpat magna dictum ante consequat. Pellentesque in, lorem fusce et tellus justo tristique, diam mi in sed.
-				</article>
-				<div class="btn-group2">
-				  <button class="button3">Option1</button>
-				  <button class="button4">Option2</button>
-				</div>	
-			</section>
+
+<div class="container" *ngIf="show">
+	<section class="main">
+		<h2>{{title}}</h2>
+		<article>
+			{{message}}
+		</article>
+		<div class="btn-group">
+			<button *ngFor="let button of buttons"><p>|</p></button>
+		</div>	
+	</section>
 </div>
-</body>
+

@@ -66,54 +66,10 @@ html{
 }
 .main .btn-group:last-child {
     border-right: none;
-}
-.btn-group .button1 {
-    border-radius: 0 0 0 16px;
-}
-.btn-group .button2 {
     border-radius: 0 0 16px 0;
 }
-
-.main2 {
-    width: 270px;
-    height: auto;
-    background-color: #ffffff;
-    text-align: center;
-    border-radius: 20px;
-    margin: 0 auto;
-    margin-top: 150px;
-}
-.main2 h2 {
-    color: #5cd65c;
-    padding-top: 1px;
-    font-size: 20px;
-}
-.main2 article {
-    font-size: 12px;
-    padding: 10px 20px 30px 20px;
-}
-.main2 .btn-group2 {
-    width: 100%;
-    height: auto;
-}
-.main2 .btn-group2 button {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    width: 100%;
-    padding: 10px 40px 10px 40px;
-    text-decoration: none;
-    font-size: 16px;
-    cursor: pointer;
-    margin: auto;
-    display: block;
-    text-align: center;
-}
-
-.btn-group2 .button4 {
-    border-radius: 0 0 16px 16px;
-}
- .main2 .btn-group2 .button3 {
-    border-bottom: thin solid #ffffff;
+.main .btn-group:first:child {
+    border-right: none;
+    border-radius: 0 0 0 16px;
 }
 
