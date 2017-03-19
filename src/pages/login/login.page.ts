@@ -47,6 +47,7 @@ export class LoginPage {
                         // alert.present();
 
                     } else if (response.incorrectPassword) {
+
                       let alertData = {
                         title: 'Login Failed',
                         message: 'Password is incorrect.',
@@ -59,34 +60,53 @@ export class LoginPage {
                         //     buttons: ['OK']
                         // });
                         // alert.present();
+
                     } else {
-                        let alert = this.alertCtrl.create({
-                            title: 'Login Failed',
-                            subTitle: 'There was an error while logging you in, please try again and if it fails contact our support.',
-                            buttons: ['OK']
-                        });
-                        alert.present();
+                       let alertData = {
+                           title: 'Login Failed',
+                           message: 'There was an error while logging you in, please try again and if it fails contact our support.',
+                           buttons: ['Ok']
+                       };
+                       this.alertService.getAlertEmitter().emit(alertData);
+                       // let alert = this.alertCtrl.create({
+                       //    title: 'Login Failed',
+                       //    subTitle: 'There was an error while logging you in, please try again and if it fails contact our support.',
+                       //   buttons: ['OK']
+                       // });
+                       // alert.present();
                     }
 
                 } else {
 
                     if (response.verified == 1) {
-                        let alert = this.alertCtrl.create({
+                        let alertData = {
                             title: 'Login Successful',
-                            subTitle: 'You have been successfully logged in. Welcome back ' + this.user.username,
-                            buttons: ['OK']
-                        });
-                        alert.present();
+                            message: 'You have been successfully logged in, Welcome back ' + this.user.username,
+                            buttons: ['Ok']
+                        };
+                        this.alertService.getAlertEmitter().emit(alertData);
+                        // let alert = this.alertCtrl.create({
+                        //    title: 'Login Successful',
+                        //    subTitle: 'You have been successfully logged in. Welcome back ' + this.user.username,
+                        //    buttons: ['Ok']
+                        // });
+                        // alert.present();
 
                         localStorage.setItem('id', response.id);
                         this.redirectToHome();
                     } else if (response.verified == 0) {
-                        let alert = this.alertCtrl.create({
+                        let alertData = {
                             title: 'Verification Required',
-                            subTitle: 'You haven\'t verified your account yet. Please verify your account before loging in.',
-                            buttons: ['OK']
-                        });
-                        alert.present();
+                            message: 'You haven\'t verified your account yet. Please verify your account before logging in.',
+                            buttons: ['Ok']
+                        };
+                        this.alertService.getAlertEmitter().emit(alertData);
+                        // let alert = this.alertCtrl.create({
+                        //    title: 'Verification Required',
+                        //    subTitle: 'You haven\'t verified your account yet. Please verify your account before loging in.',
+                        //    buttons: ['OK']
+                        // });
+                        // alert.present();
                     }
                 }
 
