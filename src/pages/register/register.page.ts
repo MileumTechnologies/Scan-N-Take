@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AlertController, NavController } from 'ionic-angular';
 
 import { RegisterService } from '../../services/register.service';
+import { AlertService } from '../../services/alert.service';
 
 import { LoginPage } from '../login/login.page';
 
@@ -20,7 +21,7 @@ export class RegisterPage {
         password: null
     };
 
-    constructor(private alertCtrl: AlertController, private registerService: RegisterService, private navController: NavController) { }
+    constructor(private alertCtrl: AlertController, private registerService: RegisterService, private navController: NavController, private alertService: AlertService) { }
 
     //   redirectToLogin() {
     //     // this.routerService.changeRoot('login');
@@ -36,55 +37,85 @@ export class RegisterPage {
 
                     // In case username is already taken
                     if (response.usernameTaken) {
-                        let alert = this.alertCtrl.create({
+                        let alertData = {
                             title: 'Registration Failed',
-                            subTitle: 'Username ' + this.user.username + ' is already taken, please pick a different username.',
-                            buttons: ['OK']
-                        });
-                        alert.present();
+                            message: 'Username ' + this.user.username + ' is already taken, please pick a different username.',
+                            buttons: ['Ok']
+                        };
+                        this.alertService.getAlertEmitter().emit(alertData);
+                        // let alert = this.alertCtrl.create({
+                        //    title: 'Registration Failed',
+                        //    subTitle: 'Username ' + this.user.username + ' is already taken, please pick a different username.',
+                        //    buttons: ['OK']
+                        // });
+                        // alert.present();
                     }
 
                     // In case email is already registered
                     else if (response.emailTaken) {
-                        let alert = this.alertCtrl.create({
+                        let alertData = {
                             title: 'Registration Failed',
-                            subTitle: 'User with that email already exists, please pick a different email address.',
-                            buttons: ['OK']
-                        });
-                        alert.present();
+                            message: 'User with that email already exists, please pick a different email address.',
+                            buttons: ['Ok']                            
+                        };
+                        this.alertService.getAlertEmitter().emit(alertData);
+                        // let alert = this.alertCtrl.create({
+                        //    title: 'Registration Failed',
+                        //    subTitle: 'User with that email already exists, please pick a different email address.',
+                        //    buttons: ['OK']
+                        // });
+                        // alert.present();
                     }
 
                     // In any other case of error
                     else {
-                        let alert = this.alertCtrl.create({
+                        let alertData = {
                             title: 'Registration Failed',
-                            subTitle: 'There was an error with your registration, please try again and if it fails contact our support. Error: ' + response.error,
-                            buttons: ['OK']
-                        });
-                        alert.present();
+                            message: 'There was an error with your registration, please try again and if it fails contact our support. Error: ' + response.error,
+                            buttons: ['Ok']
+                        };
+                        this.alertService.getAlertEmitter().emit(alertData);
+                        // let alert = this.alertCtrl.create({
+                        //    title: 'Registration Failed',
+                        //    subTitle: 'There was an error with your registration, please try again and if it fails contact our support. Error: ' + response.error,
+                        //    buttons: ['OK']
+                        // });
+                        // alert.present();
                     }
 
                     // If there was no error
                 } else {
 
                     if (response.emailSent) {
-                        let alert = this.alertCtrl.create({
-                            title: 'Registration Succesfull',
-                            subTitle: 'You have been succesfully registered, a verification email has been sent to ' + this.user.email + '. Please verify your account.',
-                            buttons: ['OK']
-                        });
-                        alert.present();
+                        let alertData = {
+                            title: 'Registration Successful',
+                            message: 'You have been successfully registered, a verification email has been sent to ' + this.user.email + '. Please verify your account.',
+                            buttons: ['Ok']
+                        };
+                        this.alertService.getAlertEmitter().emit(alertData);
+                        // let alert = this.alertCtrl.create({
+                        //    title: 'Registration Succesfull',
+                        //    subTitle: 'You have been succesfully registered, a verification email has been sent to ' + this.user.email + '. Please verify your account.',
+                        //    buttons: ['OK']
+                        // });
+                        // alert.present();
 
                         //   this.redirectToLogin();
                     }
 
                     else if (!response.emailSent) {
-                        let alert = this.alertCtrl.create({
-                            title: 'Registration Succesfull',
-                            subTitle: 'You have been succesfully registered, but for some reason verification email failed to send. Please verify your account manually by visiting ' + response.verificationLink + ' or contact support.',
-                            buttons: ['OK']
-                        });
-                        alert.present();
+                        let alertData = {
+                            title: 'Registration Successful',
+                            message: 'You have been successfully registered, but for some reason verification email failed to send. Please verify your account manually by visiting ' + response.verificationLink + ' or contact support.',
+                            buttons: ['Ok']
+                        };
+                        this.alertService.getAlertEmitter().emit(alertData);
+                        // let alert = this.alertCtrl.create({
+                        //    title: 'Registration Successful',
+                        //    subTitle: 'You have been succesfully registered, but for some reason verification email failed to send. Please verify your account manually by visiting ' + response.verificationLink + ' or contact support.',
+                        //    buttons: ['OK']
+                        // });
+                        // alert.present();
                     }
                 }
 
