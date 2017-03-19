@@ -5,8 +5,9 @@
 			{{message}}
 		</article>
 		<div class="btn-group">
-      <div class='btn' *ngFor="let button of buttons">
+      <div class='btn' *ngFor="let button of buttons; let i = index">
 			  <div (click)='buttonClick(button)'>{{button}}</div>
+			  <p *ngIf="i < buttons.length - 1">|</p>
       </div>
 		</div>
 	</section>
