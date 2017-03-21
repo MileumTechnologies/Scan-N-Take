@@ -108,8 +108,13 @@ alert-page .box .btn-group div:first-child {
     border-radius: 0 0 0 16px;
 } 
 alert-page .box .btn-group .btn p {
+    position: relative;
+    left: 39%;
     display: inline;
     font-size: 16px;
     cursor: text; 
+}
+alert-page .box .btn-group .btn:hover {
+    opacity: 0.8;
 }
 
