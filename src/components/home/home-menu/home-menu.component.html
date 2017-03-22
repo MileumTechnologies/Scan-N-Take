@@ -1,1 +1,3 @@
-<div></div>
+<ion-list #homeMenu>
+  <home-menu-item *ngFor="let menuItem of menuItems" [itemData]="menuItem"></home-menu-item>
+</ion-list>

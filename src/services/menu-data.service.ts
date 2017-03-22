@@ -12,7 +12,7 @@ export class MenuDataService {
     public getData(forMenu: string): Observable<any> {
         let url;
         switch(forMenu) {
-            case 'home': 
+            case 'home':
                 url = this.homeMenuDataUrl;
                 break;
             case 'shopping':
@@ -20,6 +20,6 @@ export class MenuDataService {
                 break;
         }
 
-        return this.http.get(url).map((response: any) => response);
+        return this.http.get(url).map((response: any) => JSON.parse(response._body));
     }
 }

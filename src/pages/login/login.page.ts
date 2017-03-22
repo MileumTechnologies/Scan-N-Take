@@ -126,7 +126,7 @@ export class LoginPage {
     redirectToHome() {
         // console.log('Redirecting to home page.');
         // this.router.changeRoot('home');
-        this.messageBus.emit({ command: 'changeRootPage', data: 'home' });
+        this.messageBus.emit({ command: 'changeAppRootPage', data: 'home' });
     }
 
     goBack() {
