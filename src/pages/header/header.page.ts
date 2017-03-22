@@ -3,6 +3,7 @@ import { App } from 'ionic-angular';
 
 import { RouterService } from '../../services/router.service';
 import { AlertComponent } from '../alert/alert.page';
+import { MessageBus } from '../../services/message-bus.service';
 
 @Component({
     selector: 'header-page',
@@ -13,12 +14,14 @@ export class HeaderPage {
     private navCtrl: any;
     private emitter: EventEmitter<any>;
 
-    constructor(private app: App, private router: RouterService) { }
+    constructor(private app: App, private router: RouterService, private messageBus: MessageBus) { }
 
     ngAfterViewInit() {
         this.navCtrl = this.app.getRootNav();
-        // console.log('NavCtrl: ', this.navCtrl);
-        // console.log('Test: ', this.navCtrl._views[0].component);
+    }
+
+    goTo(page: string) {
+        this.messageBus.emit({ command: 'changeAppPage', data: page });
     }
 
     goBack() {

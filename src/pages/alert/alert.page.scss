@@ -1,74 +1,3 @@
-/*  html{
-  position:relative;
- }
-
-.container{
-    min-height: 100%;
-    max-width: 960px;
-}
-
-.main{
-    width: 270px;
-    height: auto;
-    background-color: #ffffff;
-    text-align: center;
-    border-radius: 20px;
-    margin: 0 auto;
-    margin-top: 50px;
-    position: relative;
-
-}
-.main h2 {
-    color: #5cd65c;
-    padding-top: 1px;
-    font-size: 20px;
-}
-.main article {
-    font-size: 12px;
-    padding: 10px 20px 30px 20px;
-}
-.main .btn-group {
-    width: 100%;
-    border-right: 1px solid #aaa;
-}
-.main .btn-group button {
-    background-color: #4CAF50; border: none;
-    color: white;
-    float: left;
-    width: 50%;
-    padding: 10px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-    margin: 0px;
-}
-.main .btn-group .button1 p {
-    position: relative;
-    left: 99px;
-    font-size: 16px;
-}
-.main .btn-group p {
-    background-color: #4CAF50; border: none;
-    color: white;
-    float: left;
-    width: 5%;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-    margin: 0px;
-    padding: 0px;
-}.main .btn-group:last-child {
-    border-right: none;
-    border-radius: 0 0 16px 0;
-}
-.main .btn-group:first:child {
-    border-right: none;
-    border-radius: 0 0 0 16px;
-} */
 alert-page {
   position: absolute;
   top: 50px;
@@ -95,7 +24,6 @@ alert-page .box .btn-group {
 alert-page .box .btn-group .btn {
     background-color: #6cae49;
     color: white;
-    float: left;
     width: 50%;
     display: inline-block;
     cursor: pointer;

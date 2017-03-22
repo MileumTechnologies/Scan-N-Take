@@ -10,13 +10,19 @@ import { RegisterPage } from '../pages/register/register.page';
 import { HomePage } from '../pages/home/home.page';
 import { ErrorPage } from '../pages/error/error.page';
 import { HeaderPage } from '../pages/header/header.page';
+
+// Components
 import { AlertComponent } from '../pages/alert/alert.page';
+import { HomeMenuComponent } from '../components/home/home-menu/home-menu.component';
+import { HomeMenuItemComponent } from '../components/home/home-menu-item/home-menu-item.component';
 
 // Services
 import { RouterService } from '../services/router.service';
 import { RegisterService } from '../services/register.service';
 import { LoginService } from '../services/login.service';
 import { AlertService } from '../services/alert.service';
+import { MessageBus } from '../services/message-bus.service';
+import { MenuDataService } from '../services/menu-data.service';
 
 @NgModule({
     declarations: [
@@ -27,7 +33,9 @@ import { AlertService } from '../services/alert.service';
         RegisterPage,
         ErrorPage,
         HeaderPage,
-        AlertComponent
+        AlertComponent,
+        HomeMenuComponent,
+        HomeMenuItemComponent
     ],
     imports: [
         IonicModule.forRoot(MyApp)
@@ -41,10 +49,12 @@ import { AlertService } from '../services/alert.service';
         RegisterPage,
         ErrorPage,
         HeaderPage,
-        AlertComponent
+        AlertComponent,
+        HomeMenuComponent,
+        HomeMenuItemComponent
     ],
     providers: [
-        Storage, RouterService, RegisterService, LoginService, AlertService,
+        Storage, RouterService, RegisterService, LoginService, AlertService, MessageBus, MenuDataService,
         { provide: ErrorHandler, useClass: IonicErrorHandler },]
 })
 export class AppModule { }

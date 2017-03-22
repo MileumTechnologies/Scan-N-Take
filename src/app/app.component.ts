@@ -1,13 +1,16 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, Inject } from '@angular/core';
 import { Platform, NavController } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 import { Storage } from '@ionic/storage';
 
 import { WelcomePage } from '../pages/welcome/welcome.page';
+import { LoginPage } from '../pages/login/login.page';
+import { RegisterPage } from '../pages/register/register.page';
 import { HomePage } from '../pages/home/home.page';
 import { ErrorPage } from '../pages/error/error.page';
 import { RouterService } from '../services/router.service';
 import { AlertComponent } from '../pages/alert/alert.page';
+import { MessageBus } from '../services/message-bus.service';
 
 @Component({
     templateUrl: 'app.html'
@@ -16,7 +19,7 @@ export class MyApp {
     @ViewChild('nav') nav: NavController
     rootPage: any = WelcomePage;
 
-    constructor(platform: Platform, private routerService: RouterService, private storage: Storage) {
+    constructor(platform: Platform, private routerService: RouterService, private storage: Storage, @Inject(MessageBus) private messageBus: MessageBus) {
         platform.ready().then(() => {
             // Okay, so the platform is ready and our plugins are available.
             // Here you can do any higher level native things you might need.
@@ -27,26 +30,37 @@ export class MyApp {
 
     ngOnInit() {
         // Change root page subscription
-        this.routerService.getChangeRootEmitter().subscribe(
-            newRootPage => this.changeRootPage(newRootPage)
-        );
+        // this.routerService.getChangeRootEmitter().subscribe(
+        //     newRootPage => this.changeAppRootPage(newRootPage)
+        // );
+        this.messageBus.subscribe(
+            (message) => {
+                if(message.command === 'changeAppRootPage') {
+                    this.changeAppRootPage(message.data);
+                }
+                else if(message.command === 'changeAppPage') {
+                    this.changeAppPage(message.data);
+                }
+                console.log('Message received: ', message);
+            }
+        )
     }
 
     ngOnDestroy() {
         this.routerService.getChangeRootEmitter().unsubscribe();
     }
 
-    private changeRootPage(newRootPage: string): void {
+    private changeAppRootPage(newRootPage: string): void {
 
         switch (newRootPage) {
-            // case 'login': {
-            //     this.rootPage = LoginPage;
-            //     break;
-            // }
-            // case 'register': {
-            //     this.rootPage = RegisterPage;
-            //     break;
-            // }
+            case 'login': {
+                this.rootPage = LoginPage;
+                break;
+            }
+            case 'register': {
+                this.rootPage = RegisterPage;
+                break;
+            }
             case 'welcome': {
                 this.rootPage = WelcomePage;
                 break;
@@ -61,8 +75,22 @@ export class MyApp {
         }
     }
 
+    private changeAppPage(newPage: string): void {
+
+        switch(newPage) {
+            case 'login': {
+                this.nav.push(LoginPage);
+                break;
+            }
+            case 'register': {
+                this.nav.push(RegisterPage);
+                break;
+            }
+        }
+    }
+
     logout() {
         localStorage.removeItem('id');
-        this.changeRootPage('welcome');
+        this.changeAppRootPage('welcome');
     }
 }

@@ -1,15 +1,16 @@
 <div class="w3-animate-zoom" *ngIf="show">
-	<section class="box">
-		<h2>{{title}}</h2>
-		<article>
-			{{message}}
-		</article>
-		<div class="btn-group">
-      <div class='btn' *ngFor="let button of buttons; let i = index">
-			  <div (click)='buttonClick(button)'>{{button}}
-			  	<p *ngIf="i < buttons.length - 1">|</p>
-			  </div>
-      </div>
-		</div>
-	</section>
+    <section class="box">
+        <h2> {{ title }} </h2>
+        <article>
+            {{ message }}
+        </article>
+        <div class="btn-group">
+            <div class='btn' *ngFor="let button of buttons; let i = index">
+                <div (click)='buttonClick(button)'>
+                    {{ button }}
+                    <p *ngIf="i < buttons.length - 1">|</p>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>

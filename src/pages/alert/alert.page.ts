@@ -1,41 +1,44 @@
-import { Component, EventEmitter } from '@angular/core';
+import { Component, EventEmitter, OnInit, OnDestroy } from '@angular/core';
 
 import { AlertService } from '../../services/alert.service';
 
 @Component({
-  selector: 'alert-page',
-  templateUrl: './alert.page.html'
+    selector: 'alert-page',
+    templateUrl: './alert.page.html'
 })
 
-export class AlertComponent {
-  private emitter: EventEmitter<any>;
-  public show: boolean = false;
-	public title: string;
-	public message: string;
-  public buttons: any[];
+export class AlertComponent implements OnInit {
+    private emitter: EventEmitter<any>;
 
-  constructor(private alertService: AlertService) {
-    this.emitter = this.alertService.getAlertEmitter();
-    this.emitter.subscribe(
-      (event) => {
-        this.title = event.title;
-        this.message = event.message;
-        this.buttons = event.buttons;
-        this.display();
-      }
-    );
-  }
+    public show: boolean = false;
+    public title: string;
+    public message: string;
+    public buttons: any[];
 
-  public buttonClick(buttonName) {
-    console.log('Alert button clicked ', buttonName);
-    this.hide();
-  }
+    constructor(private alertService: AlertService) { }
 
-  public display() {
-    this.show = true;
-  }
+    ngOnInit() {
+        this.emitter = this.alertService.getAlertEmitter();
+        this.emitter.subscribe(
+            (event) => {
+                this.title = event.title;
+                this.message = event.message;
+                this.buttons = event.buttons;
+                this.display();
+            }
+        );
+    }
 
-  public hide() {
-    this.show = false;
-  }
+    public buttonClick(buttonName) {
+        console.log('Alert button clicked ', buttonName);
+        this.hide();
+    }
+
+    public display() {
+        this.show = true;
+    }
+
+    public hide() {
+        this.show = false;
+    }
 }

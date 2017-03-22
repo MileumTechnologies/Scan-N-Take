@@ -5,6 +5,7 @@ import { Storage } from '@ionic/storage';
 import { LoginService } from '../../services/login.service';
 import { RouterService } from '../../services/router.service';
 import { AlertService } from '../../services/alert.service';
+import { MessageBus } from '../../services/message-bus.service';
 
 import { RegisterPage } from '../register/register.page';
 
@@ -21,7 +22,7 @@ export class LoginPage {
         username: null
     };
 
-    constructor(private alertCtrl: AlertController, private storage: Storage, private router: RouterService, private loginService: LoginService, private navController: NavController, private alertService: AlertService) { }
+    constructor(private messageBus: MessageBus, private alertCtrl: AlertController, private storage: Storage, private router: RouterService, private loginService: LoginService, private navController: NavController, private alertService: AlertService) { }
 
     ngOnInit() {
         console.log(this.navController);
@@ -124,7 +125,8 @@ export class LoginPage {
 
     redirectToHome() {
         // console.log('Redirecting to home page.');
-        this.router.changeRoot('home');
+        // this.router.changeRoot('home');
+        this.messageBus.emit({ command: 'changeRootPage', data: 'home' });
     }
 
     goBack() {
