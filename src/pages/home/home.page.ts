@@ -10,6 +10,8 @@ import { RouterService } from '../../services/router.service';
     templateUrl: 'home.page.html'
 })
 export class HomePage {
+    static title: string = 'Home';
+
     constructor(private routerService: RouterService, private storage: Storage) {}
 
     logout(): void {
