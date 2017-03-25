@@ -3,14 +3,20 @@ import { Platform, NavController } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 import { Storage } from '@ionic/storage';
 
+// Pages
 import { WelcomePage } from '../pages/welcome/welcome.page';
 import { LoginPage } from '../pages/login/login.page';
 import { RegisterPage } from '../pages/register/register.page';
 import { HomePage } from '../pages/home/home.page';
 import { ErrorPage } from '../pages/error/error.page';
-import { RouterService } from '../services/router.service';
+import { ShoppingPage } from '../pages/shopping/shopping.page';
+
+// Components
 import { AlertComponent } from '../pages/alert/alert.page';
+
+// Services
 import { MessageBus } from '../services/message-bus.service';
+import { RouterService } from '../services/router.service';
 
 @Component({
     templateUrl: 'app.html'
@@ -84,6 +90,10 @@ export class MyApp {
             }
             case 'register': {
                 this.nav.push(RegisterPage);
+                break;
+            }
+            case 'shopping': {
+                this.nav.push(ShoppingPage);
                 break;
             }
         }

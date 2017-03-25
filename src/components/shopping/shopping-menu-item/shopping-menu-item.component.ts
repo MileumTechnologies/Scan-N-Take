@@ -2,13 +2,15 @@ import { Component, Input } from '@angular/core';
 import { MessageBus } from '../../../services/message-bus.service';
 
 @Component({
-    selector: 'home-menu-item',
-    templateUrl: 'home-menu-item.component.html'
+    selector: 'shopping-menu-item',
+    templateUrl: 'shopping-menu-item.component.html'
 })
-export class HomeMenuItemComponent {
+export class ShoppingMenuItemComponent {
     @Input() itemData: any;
 
-    constructor(private messageBus: MessageBus) {}
+    constructor(private messageBus: MessageBus) {
+
+    }
 
     goToPage(page: string) {
         this.messageBus.emit({ command: 'changeAppPage', data: page });
