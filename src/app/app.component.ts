@@ -47,6 +47,9 @@ export class MyApp {
                 else if(message.command === 'changeAppPage') {
                     this.changeAppPage(message.data);
                 }
+                else if(message.command === 'logout') {
+                    this.logout();
+                }
                 console.log('Message received: ', message);
             }
         )
