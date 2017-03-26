@@ -85,20 +85,23 @@ welcome-page .button-divider {
 
 welcome-page .buttons-wrapper {
 	background: rgba(0, 0, 0, 0.2);
-	width: 60%;
+    padding: 3px 20px;
+	width: 70%;
 	border: 1px solid #FFF;
-	margin-left: 20%;
+	margin-left: 15%;
 	border-radius: 5px;
 }
 
 welcome-page .login-wrapper {
-	text-align: left;
-	display: inline;
+    width: 48%;
+    margin-top: 9px;
+	text-align: center;
+    font-weight: bold;
+    float: left;
 }
 
 welcome-page .login {
-	width: 30%;
-	padding: 5px;
+	display: inline;
 	color: #FFF;
     font-size: 1.2em;
 	background:  rgba(0, 0, 0, 0);
@@ -106,12 +109,16 @@ welcome-page .login {
 }
 
 welcome-page .register-wrapper {
-	text-align: right;
-	display: inline;
+    width: 44%;
+    margin-left: 5px;
+    margin-top: 9px;
+	text-align: center;
+    font-weight: bold;
+    float: right;
 }
 
 welcome-page .register {
-	width: 35%;
+	display: inline;
 	color: #FFF;
     font-size: 1.2em;
 	background:  rgba(0, 0, 0, 0);
@@ -119,6 +126,8 @@ welcome-page .register {
 
 welcome-page .button-divider {
 	display: inline;
+    margin: 0px;
 	color: #FFF;
+    font-size: 25px;
 }
 
