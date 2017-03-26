@@ -1,12 +1,23 @@
 h1 {
 	color: #FFF;
-	font-size: 40px;
+	font-size: 2.3em;
+}
+
+welcome-page span {
+	font-weight: bold;
 }
 
 welcome-page .background {
 	background-image: url("../../assets/background/background.jpg");
 	background-repeat: no-repeat;
-	background-size: 100% 100%;
+	background-size: 250% 100%;
+	background-position: 40% 0;
+}
+
+welcome-page .content-wrapper {
+	background: rgba(0, 0, 0, 0.65);
+	width: 100%;
+	margin-top: 40%;
 }
 
 welcome-page .title {
@@ -17,19 +28,20 @@ welcome-page .title {
 
 welcome-page .welcome-msg {
 	color: #FFF;
-	font-size: 17px;
+	font-size: 1.1em;
 }
 
 welcome-page .logo {
 	margin-top: 60px;
 	width: 100%;
 	text-align: center;
+	padding-top: 15px;
 }
 
 img {
-	width: 100px;
+	width: 80px;
 }
-
+/*
 welcome-page .login-wrapper {
 	width: 100%;
 	text-align: center;
@@ -38,6 +50,7 @@ welcome-page .login-wrapper {
 welcome-page .register-wrapper {
 	width: 100%;
 	text-align: center;
+	display: inline-block;
 }
 
 welcome-page .login {
@@ -65,3 +78,47 @@ welcome-page .register {
     font-size: 16px;
     margin-top: 15px;
 }
+
+welcome-page .button-divider {
+	color: #FFF;
+}*/
+
+welcome-page .buttons-wrapper {
+	background: rgba(0, 0, 0, 0.2);
+	width: 60%;
+	border: 1px solid #FFF;
+	margin-left: 20%;
+	border-radius: 5px;
+}
+
+welcome-page .login-wrapper {
+	text-align: left;
+	display: inline;
+}
+
+welcome-page .login {
+	width: 30%;
+	padding: 5px;
+	color: #FFF;
+    font-size: 1.2em;
+	background:  rgba(0, 0, 0, 0);
+
+}
+
+welcome-page .register-wrapper {
+	text-align: right;
+	display: inline;
+}
+
+welcome-page .register {
+	width: 35%;
+	color: #FFF;
+    font-size: 1.2em;
+	background:  rgba(0, 0, 0, 0);
+}
+
+welcome-page .button-divider {
+	display: inline;
+	color: #FFF;
+}
+

@@ -2,6 +2,14 @@ login-page .login-form-wrapper {
   margin-top: 100px;
 }
 
+login-page .form-background {
+  width: 80%;
+  height: 50%;
+  background: rgba(0, 0, 0, 0.65);
+  text-align: center;
+margin: auto;
+}
+
 login-page .login {
   width: 100%;
   margin: 0 auto;
@@ -47,23 +55,24 @@ login-page .login-button-wrapper {
 
 login-page .login-button {
   margin-top: 30px;
-  width: 240px;
-  height: 45px;
-  background: #FFF;
-  border: 1px solid #FFF;
+  margin-bottom: 10px;
+  width: 60%;
+	border: 1px solid #FFF;
   border-radius: 5px;
-  box-shadow: 0px 0px 7px -1px #000;
-  color: #8bc34a;
+  background: rgba(0, 0, 0, 0.2);
+  color: #FFF;
   font-weight: bold;
   font-size: 16px;
+  padding: 10px;
+  box-shadow: 0px 0px 7px -1px #000;
 }
 
-login-page .or {
+/*login-page .or {
   font-size: 18px;
   color: #FFF;
   text-align: center;
   margin-top: 30px;
-}
+}*/
 
 login-page .register-link-wrapper {
   width: 100%;
@@ -72,11 +81,12 @@ login-page .register-link-wrapper {
 }
 
 login-page .background {
-  background-image: url("../../assets/background/background.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+	background-image: url("../../assets/background/background.jpg");
+	background-repeat: no-repeat;
+	background-size: 250% 100%;
+	background-position: 40% 0;
 }
-
+/*
 login-page .googleLI-button-wrapper {
   width: 100%;
   text-align: center;
@@ -141,4 +151,4 @@ login-page .signIn-ToS {
 login-page .signIn-ToS p a {
   color: #FFF;
   font-size: 14px;
-}
+}*/

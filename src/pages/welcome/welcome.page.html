@@ -1,18 +1,26 @@
 <ion-content class='background'>
 
-    <div class='logo'>
-        <img src="../../assets/logo/logo.png" />
-    </div>
+   <div class='content-wrapper'> 
 
-    <div class='title'>
-	<h1> Welcome </h1>
-	<p class='welcome-msg'> Welcome to Scan'N'Take. Sign up or register to shop faster than ever before. </p>
-    </div>
+        <div class='logo'>
+            <img src="../../assets/logo/logo.png" />
+        </div>
 
-	<div class='login-wrapper'>
-    	<button class='login' (click)='goToLogin()'> Log In </button>
-    </div>
-    <div class='register-wrapper'>
-    	<button class='register' (click)='goToRegister()'> Register </button>
-    </div>
+        <div class='title'>
+        <h1> Welcome to <br />
+        <span>Scan 'N' Take </span> </h1>
+        <p class='welcome-msg'> Take your shopping experience to the next level </p>
+        </div>
+
+        <div class='buttons-wrapper'>
+
+            <div class='login-wrapper'>
+                <button class='login' (click)='goToLogin()'> Log In </button>
+            </div> <p class='button-divider'> | </p>
+           <div class='register-wrapper'>
+                <button class='register' (click)='goToRegister()'> Register </button>
+            </div> 
+        </div>
+
+   </div>
 </ion-content>
