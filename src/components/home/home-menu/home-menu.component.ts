@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { HomeMenuItemComponent } from '../home-menu-item/home-menu-item.component';
 import { MenuDataService } from '../../../services/menu-data.service';
 
 @Component({
@@ -7,7 +6,7 @@ import { MenuDataService } from '../../../services/menu-data.service';
     templateUrl: 'home-menu.component.html'
 })
 export class HomeMenuComponent {
-    public menuItems: HomeMenuItemComponent[];
+    public menuItems: any[];
 
     constructor(private menuDataService: MenuDataService) {
         console.log('HomeMenu');

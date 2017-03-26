@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, OnDestroy } from '@angular/core';
+import { Component, EventEmitter, OnInit } from '@angular/core';
 
 import { AlertService } from '../../services/alert.service';
 

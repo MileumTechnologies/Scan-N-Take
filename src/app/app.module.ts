@@ -11,6 +11,7 @@ import { HomePage } from '../pages/home/home.page';
 import { ErrorPage } from '../pages/error/error.page';
 import { HeaderPage } from '../pages/header/header.page';
 import { ShoppingPage } from '../pages/shopping/shopping.page';
+import { ShoppingCartPage } from '../pages/shopping-cart/shopping-cart.page';
 
 // Components
 import { AlertComponent } from '../pages/alert/alert.page';
@@ -18,6 +19,9 @@ import { HomeMenuComponent } from '../components/home/home-menu/home-menu.compon
 import { HomeMenuItemComponent } from '../components/home/home-menu-item/home-menu-item.component';
 import { ShoppingMenuComponent } from '../components/shopping/shopping-menu/shopping-menu.component';
 import { ShoppingMenuItemComponent } from '../components/shopping/shopping-menu-item/shopping-menu-item.component';
+import { ShoppingCartListComponent } from '../components/shopping-cart/shopping-cart-list/shopping-cart-list.component';
+import { ShoppingCartListItemComponent } from '../components/shopping-cart/shopping-cart-list-item/shopping-cart-list-item.component';
+import { ItemScannerComponent } from '../components/item-scanner/item-scanner.component';
 
 // Services
 import { RouterService } from '../services/router.service';
@@ -33,6 +37,7 @@ import { MenuDataService } from '../services/menu-data.service';
         WelcomePage,
         HomePage,
         ShoppingPage,
+        ShoppingCartPage,
         LoginPage,
         RegisterPage,
         ErrorPage,
@@ -41,7 +46,10 @@ import { MenuDataService } from '../services/menu-data.service';
         HomeMenuComponent,
         HomeMenuItemComponent,
         ShoppingMenuComponent,
-        ShoppingMenuItemComponent
+        ShoppingMenuItemComponent,
+        ShoppingCartListComponent,
+        ShoppingCartListItemComponent,
+        ItemScannerComponent
     ],
     imports: [
         IonicModule.forRoot(MyApp)
@@ -52,6 +60,7 @@ import { MenuDataService } from '../services/menu-data.service';
         WelcomePage,
         HomePage,
         ShoppingPage,
+        ShoppingCartPage,
         LoginPage,
         RegisterPage,
         ErrorPage,
@@ -60,7 +69,10 @@ import { MenuDataService } from '../services/menu-data.service';
         HomeMenuComponent,
         HomeMenuItemComponent,
         ShoppingMenuComponent,
-        ShoppingMenuItemComponent
+        ShoppingMenuItemComponent,
+        ShoppingCartListComponent,
+        ShoppingCartListItemComponent,
+        ItemScannerComponent
     ],
     providers: [
         Storage, RouterService, RegisterService, LoginService, AlertService, MessageBus, MenuDataService,

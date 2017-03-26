@@ -10,9 +10,9 @@ import { RegisterPage } from '../pages/register/register.page';
 import { HomePage } from '../pages/home/home.page';
 import { ErrorPage } from '../pages/error/error.page';
 import { ShoppingPage } from '../pages/shopping/shopping.page';
+import { ShoppingCartPage } from '../pages/shopping-cart/shopping-cart.page';
 
 // Components
-import { AlertComponent } from '../pages/alert/alert.page';
 
 // Services
 import { MessageBus } from '../services/message-bus.service';

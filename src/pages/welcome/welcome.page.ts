@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-import { LoginPage } from '../login/login.page';
-import { RegisterPage } from '../register/register.page';
 import { RouterService } from '../../services/router.service';
 import { MessageBus } from '../../services/message-bus.service';
 
