@@ -17,29 +17,31 @@ export class ShoppingCartListComponent implements OnInit {
             (message) => {
                 if (message.command === 'addItemToCart') {
                     this.addItemToCart(message.data);
+                } else if (message.command === 'removeItemFromCart') {
+                    this.remoteItemFromCart(message.data);
                 }
             }
         );
 
         
-        this.messageBus.emit({ command: 'addItemToCart', data: {
-            name: 'Cocca Colla',
-            packaging: '50ml',
-            price: 20.00,
-            quantity: 1
-        }});
-        this.messageBus.emit({ command: 'addItemToCart', data: {
-            name: 'Cocca Colla',
-            packaging: '50ml',
-            price: 20.00,
-            quantity: 1
-        }});
-        this.messageBus.emit({ command: 'addItemToCart', data: {
-            name: 'Cocca Colla',
-            packaging: '200ml',
-            price: 20.00,
-            quantity: 1
-        }});
+        // this.messageBus.emit({ command: 'addItemToCart', data: {
+        //     name: 'Cocca Colla',
+        //     packaging: '50ml',
+        //     price: 20.00,
+        //     quantity: 1
+        // }});
+        // this.messageBus.emit({ command: 'addItemToCart', data: {
+        //     name: 'Cocca Colla',
+        //     packaging: '50ml',
+        //     price: 20.00,
+        //     quantity: 1
+        // }});
+        // this.messageBus.emit({ command: 'addItemToCart', data: {
+        //     name: 'Cocca Colla',
+        //     packaging: '200ml',
+        //     price: 20.00,
+        //     quantity: 1
+        // }});
     }
 
     private addItemToCart(item: any) {
@@ -56,6 +58,26 @@ export class ShoppingCartListComponent implements OnInit {
             this.itemList[elementIndex].quantity += item.quantity;
         } else {
             this.itemList.push(item);
+        }
+    }
+
+    private remoteItemFromCart(item: any) {
+        let elementIndex = this.itemList.findIndex(
+            (elem) => {
+                if (elem.name === item.name && elem.packaging === item.packaging && elem.price === item.price)
+                    return true;
+            }
+        );
+
+        console.log(elementIndex);
+
+        if(elementIndex >= 0) {
+            if(this.itemList[elementIndex].quantity > 1) {
+                this.itemList[elementIndex].quantity--;
+            }
+            else {
+                this.itemList.splice(elementIndex, 1);
+            }
         }
     }
 }

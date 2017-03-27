@@ -14,7 +14,7 @@
         <div class='price'> {{ itemData?.price }} </div>
         <div class='quantity'> {{ itemData?.quantity }} </div>
         <div class='actions'>
-            <a> Remove </a>
+            <a (click)='remove()'> Remove </a>
             |
             <a> Add to list </a>
         </div>

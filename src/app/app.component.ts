@@ -1,7 +1,7 @@
-import { Component, ViewChild, Inject } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { Platform, NavController } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
-import { Storage } from '@ionic/storage'; 
+import { Storage } from '@ionic/storage';
 
 // Pages
 import { WelcomePage } from '../pages/welcome/welcome.page';
@@ -23,9 +23,9 @@ import { RouterService } from '../services/router.service';
 })
 export class MyApp {
     @ViewChild('nav') nav: NavController
-    rootPage: any = WelcomePage;
+    rootPage: any = ShoppingCartPage;
 
-    constructor(platform: Platform, private routerService: RouterService, private storage: Storage, @Inject(MessageBus) private messageBus: MessageBus) {
+    constructor(platform: Platform, private routerService: RouterService, private storage: Storage, private messageBus: MessageBus) {
         platform.ready().then(() => {
             // Okay, so the platform is ready and our plugins are available.
             // Here you can do any higher level native things you might need.
@@ -98,6 +98,10 @@ export class MyApp {
             case 'shopping': {
                 this.nav.push(ShoppingPage);
                 break;
+            }
+            case 'shopping-cart': {
+              this.nav.push(ShoppingCartPage);
+              break;
             }
         }
     }

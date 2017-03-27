@@ -30,6 +30,8 @@ import { LoginService } from '../services/login.service';
 import { AlertService } from '../services/alert.service';
 import { MessageBus } from '../services/message-bus.service';
 import { MenuDataService } from '../services/menu-data.service';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { ProductDetailsService } from '../services/product-details.service';
 
 @NgModule({
     declarations: [
@@ -75,7 +77,7 @@ import { MenuDataService } from '../services/menu-data.service';
         ItemScannerComponent
     ],
     providers: [
-        Storage, RouterService, RegisterService, LoginService, AlertService, MessageBus, MenuDataService,
+        Storage, RouterService, RegisterService, LoginService, AlertService, MessageBus, MenuDataService, BarcodeScanner, ProductDetailsService,
         { provide: ErrorHandler, useClass: IonicErrorHandler },]
 })
 export class AppModule { }
