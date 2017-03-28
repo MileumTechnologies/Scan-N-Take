@@ -1,5 +1,33 @@
 home-menu-item ion-card-header{
-    margin-top: -40px;
+    padding: 0px !important;
     font-weight: bold;
     color: white;
+}
+
+home-menu-item ion-card-content {
+    padding: 0px !important;
+}
+
+home-menu-item .home-item-image {
+    height: 110px;
+}
+
+home-menu-item .home-menu-item-wrapper {
+    background-color: black;
+    margin-top: -30px;
+    opacity: 0.5;
+}
+
+home-menu-item .home-item-name {
+    background: rgba(0.2, 0.2, 0.2, 0.7);
+    position: sticky;
+    margin-top: -25px;
+    padding-left: 20px;
+    color: white;
+}
+
+home-menu-item .home-item-description {
+    font-size: 1.1rem;
+    padding: 5px;
+    margin-left: 15px;
 }
