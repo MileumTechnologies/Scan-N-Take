@@ -16,6 +16,8 @@ import { ShoppingPage } from '../pages/shopping/shopping.page';
 import { AlertComponent } from '../pages/alert/alert.page';
 import { HomeMenuComponent } from '../components/home/home-menu/home-menu.component';
 import { HomeMenuItemComponent } from '../components/home/home-menu-item/home-menu-item.component';
+import { HeaderMenuComponent } from '../components/header/header-menu/header-menu.component';
+import { HeaderMenuItemComponent } from '../components/header/header-menu-item/header-menu-item.component'
 import { ShoppingMenuComponent } from '../components/shopping/shopping-menu/shopping-menu.component';
 import { ShoppingMenuItemComponent } from '../components/shopping/shopping-menu-item/shopping-menu-item.component';
 
@@ -40,6 +42,8 @@ import { MenuDataService } from '../services/menu-data.service';
         AlertComponent,
         HomeMenuComponent,
         HomeMenuItemComponent,
+        HeaderMenuComponent,
+        HeaderMenuItemComponent,
         ShoppingMenuComponent,
         ShoppingMenuItemComponent
     ],
@@ -59,6 +63,8 @@ import { MenuDataService } from '../services/menu-data.service';
         AlertComponent,
         HomeMenuComponent,
         HomeMenuItemComponent,
+        HeaderMenuComponent,
+        HeaderMenuItemComponent,
         ShoppingMenuComponent,
         ShoppingMenuItemComponent
     ],
