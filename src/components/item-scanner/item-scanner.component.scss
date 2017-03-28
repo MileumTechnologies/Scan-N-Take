@@ -1,17 +1,12 @@
-item-scanner ion-footer {
-    bottom: 50px;
-}
-
-item-scanner ion-footer .toolbar {
-    min-height: 0px;
-    padding: 0px;
-    margin-bottom: 5px;
-}
-
-item-scanner ion-title {
-    text-align: center;
-}
-
-item-scanner ion-title i {
+item-scanner .item-scanner {
+    position: absolute;
+    bottom: 70px;
+    right: 20px;
+    background-color: lightgray;
+    padding: 20px;
     font-size: 20px;
+    border-radius: 100px;
+    width: 70px;
+    height: 70px;
+    text-align: center;
 }
