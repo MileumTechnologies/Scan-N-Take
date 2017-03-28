@@ -1,0 +1,67 @@
+[{
+	"name": {
+		"en": "Account",
+		"hr": ""
+	},
+	"description": {
+		"en": "",
+		"hr": ""
+	},
+	"page": "AccountPage",
+	"imgUrl": ""
+}, {
+	"name": {
+		"en": "Billing",
+		"hr": ""
+	},
+	"description": {
+		"en": "",
+		"hr": ""
+	},
+	"page": "BillingPage",
+	"imgUrl": ""
+}, {
+	"name": {
+		"en": "Language",
+		"hr": ""
+	},
+	"description": {
+		"en": "",
+		"hr": ""
+	},
+	"page": "LanguagePage",
+	"imgUrl": ""
+}, {
+	"name": {
+		"en": "Settings",
+		"hr": ""
+	},
+	"description": {
+		"en": "",
+		"hr": ""
+	},
+	"page": "SettingsPage",
+	"imgUrl": ""
+}, {
+	"name": {
+		"en": "Help",
+		"hr": ""
+	},
+	"description": {
+		"en": "",
+		"hr": ""
+	},
+	"page": "HelpPage",
+	"imgUrl": ""
+}, {
+	"name": {
+		"en": "Feedback",
+		"hr": ""
+	},
+	"description": {
+		"en": "",
+		"hr": ""
+	},
+	"page": "FeedbackPage",
+	"imgUrl": ""
+}]
