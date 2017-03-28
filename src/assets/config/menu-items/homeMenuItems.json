@@ -1,14 +1,14 @@
 [{
 	"name": {
-		"en": "Shopping",
-		"hr": "Kupovina"
+		"en": "Start shopping",
+		"hr": "Započnite kupovinu"
 	},
 	"description": {
 		"en": "Your shopping list.",
 		"hr": ""
 	},
 	"page": "shopping",
-	"imgUrl": ""
+	"imgUrl": "../assets/menu-backgrounds/shopping.jpg"
 }, {
 	"name": {
 		"en": "Discounts",
@@ -19,7 +19,7 @@
 		"hr": ""
 	},
 	"page": "DiscountsPage",
-	"imgUrl": ""
+	"imgUrl":  "../assets/menu-backgrounds/discount.jpg"
 }, {
 	"name": {
 		"en": "Whishlist",
@@ -30,5 +30,5 @@
 		"hr": ""
 	},
 	"page": "WhishlistPage",
-	"imgUrl": ""
+	"imgUrl":  "../assets/menu-backgrounds/wishlist.jpg"
 }]

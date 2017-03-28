@@ -1,5 +1,5 @@
 login-page .login-form-wrapper {
-  margin-top: 100px;
+  margin-top: 130px;
 }
 
 login-page .form-background {
@@ -7,7 +7,7 @@ login-page .form-background {
   height: 50%;
   background: rgba(0, 0, 0, 0.65);
   text-align: center;
-margin: auto;
+  margin: auto;
 }
 
 login-page .login {
@@ -67,26 +67,34 @@ login-page .login-button {
   box-shadow: 0px 0px 7px -1px #000;
 }
 
-/*login-page .or {
-  font-size: 18px;
-  color: #FFF;
-  text-align: center;
-  margin-top: 30px;
-}*/
-
 login-page .register-link-wrapper {
   width: 100%;
   margin-top: 20px;
   text-align: center;
 }
+/*
+
+Now in backgrounds.scss
 
 login-page .background {
 	background-image: url("../../assets/background/background.jpg");
 	background-repeat: no-repeat;
 	background-size: 250% 100%;
 	background-position: 40% 0;
-}
+}*/
+
+
+
 /*
+Facebook & Google buttons, ToS
+
+login-page .or {
+  font-size: 18px;
+  color: #FFF;
+  text-align: center;
+  margin-top: 30px;
+}
+
 login-page .googleLI-button-wrapper {
   width: 100%;
   text-align: center;
