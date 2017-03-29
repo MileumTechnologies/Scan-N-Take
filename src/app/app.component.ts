@@ -10,6 +10,12 @@ import { RegisterPage } from '../pages/register/register.page';
 import { HomePage } from '../pages/home/home.page';
 import { ErrorPage } from '../pages/error/error.page';
 import { ShoppingPage } from '../pages/shopping/shopping.page';
+import { AccountPage } from '../pages/account/account.page';
+import { BillingPage } from '../pages/billing/billing.page';
+import { LanguagePage } from '../pages/language/language.page';
+import { SettingsPage } from '../pages/settings/settings.page';
+import { HelpPage } from '../pages/help/help.page';
+import { FeedbackPage } from '../pages/feedback/feedback.page'
 
 // Components
 import { AlertComponent } from '../pages/alert/alert.page';
@@ -97,6 +103,30 @@ export class MyApp {
             }
             case 'shopping': {
                 this.nav.push(ShoppingPage);
+                break;
+            }
+            case 'account': {
+                this.nav.push(AccountPage);
+                break;
+            }
+            case 'billing': {
+                this.nav.push(BillingPage);
+                break;
+            }
+            case 'language': {
+                this.nav.push(LanguagePage);
+                break;
+            }
+            case 'settings': {
+                this.nav.push(SettingsPage);
+                break;
+            }
+            case 'help': {
+                this.nav.push(HelpPage);
+                break;
+            }
+            case 'feedback': {
+                this.nav.push(FeedbackPage);
                 break;
             }
         }

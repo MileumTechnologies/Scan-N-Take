@@ -11,6 +11,12 @@ import { HomePage } from '../pages/home/home.page';
 import { ErrorPage } from '../pages/error/error.page';
 import { HeaderPage } from '../pages/header/header.page';
 import { ShoppingPage } from '../pages/shopping/shopping.page';
+import { AccountPage } from '../pages/account/account.page';
+import { BillingPage } from '../pages/billing/billing.page';
+import { LanguagePage } from '../pages/language/language.page';
+import { SettingsPage } from '../pages/settings/settings.page';
+import { HelpPage } from '../pages/help/help.page';
+import { FeedbackPage } from '../pages/feedback/feedback.page'
 
 // Components
 import { AlertComponent } from '../pages/alert/alert.page';
@@ -39,13 +45,19 @@ import { MenuDataService } from '../services/menu-data.service';
         RegisterPage,
         ErrorPage,
         HeaderPage,
+        AccountPage,
         AlertComponent,
         HomeMenuComponent,
         HomeMenuItemComponent,
         HeaderMenuComponent,
         HeaderMenuItemComponent,
         ShoppingMenuComponent,
-        ShoppingMenuItemComponent
+        ShoppingMenuItemComponent,
+        BillingPage,
+        LanguagePage,
+        HelpPage,
+        SettingsPage,
+        FeedbackPage
     ],
     imports: [
         IonicModule.forRoot(MyApp)
@@ -60,13 +72,19 @@ import { MenuDataService } from '../services/menu-data.service';
         RegisterPage,
         ErrorPage,
         HeaderPage,
+        AccountPage,
         AlertComponent,
         HomeMenuComponent,
         HomeMenuItemComponent,
         HeaderMenuComponent,
         HeaderMenuItemComponent,
         ShoppingMenuComponent,
-        ShoppingMenuItemComponent
+        ShoppingMenuItemComponent,
+        BillingPage,
+        LanguagePage,
+        HelpPage,
+        SettingsPage,
+        FeedbackPage
     ],
     providers: [
         Storage, RouterService, RegisterService, LoginService, AlertService, MessageBus, MenuDataService,
