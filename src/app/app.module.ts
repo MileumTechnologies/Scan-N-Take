@@ -19,13 +19,12 @@ import { HelpPage } from '../pages/help/help.page';
 import { FeedbackPage } from '../pages/feedback/feedback.page';
 import { ShoppingCartPage } from '../pages/shopping-cart/shopping-cart.page';
 
-
 // Components
 import { AlertComponent } from '../pages/alert/alert.page';
 import { HomeMenuComponent } from '../components/home/home-menu/home-menu.component';
 import { HomeMenuItemComponent } from '../components/home/home-menu-item/home-menu-item.component';
 import { HeaderMenuComponent } from '../components/header/header-menu/header-menu.component';
-import { HeaderMenuItemComponent } from '../components/header/header-menu-item/header-menu-item.component'
+import { HeaderMenuItemComponent } from '../components/header/header-menu-item/header-menu-item.component';
 import { ShoppingMenuComponent } from '../components/shopping/shopping-menu/shopping-menu.component';
 import { ShoppingMenuItemComponent } from '../components/shopping/shopping-menu-item/shopping-menu-item.component';
 import { ShoppingCartListComponent } from '../components/shopping-cart/shopping-cart-list/shopping-cart-list.component';

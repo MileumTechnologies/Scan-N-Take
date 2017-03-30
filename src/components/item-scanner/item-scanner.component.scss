@@ -10,3 +10,21 @@ item-scanner .item-scanner {
     height: 70px;
     text-align: center;
 }
+
+item-scanner ion-footer {
+    bottom: 50px;
+}
+
+item-scanner ion-footer .toolbar {
+    min-height: 0px;
+    padding: 0px;
+    margin-bottom: 5px;
+}
+
+item-scanner ion-title {
+    text-align: center;
+}
+
+item-scanner ion-title i {
+    font-size: 20px;
+}
