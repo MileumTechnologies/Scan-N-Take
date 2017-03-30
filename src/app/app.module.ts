@@ -28,6 +28,8 @@ import { ShoppingMenuItemComponent } from '../components/shopping/shopping-menu-
 import { ShoppingCartListComponent } from '../components/shopping-cart/shopping-cart-list/shopping-cart-list.component';
 import { ShoppingCartListItemComponent } from '../components/shopping-cart/shopping-cart-list-item/shopping-cart-list-item.component';
 import { ItemScannerComponent } from '../components/item-scanner/item-scanner.component';
+import { HeaderMenuComponent } from '../components/header/header-menu/header-menu.component';
+import { HeaderMenuItemComponent } from '../components/header/header-menu-item/header-menu-item.component';
 
 // Services
 import { RouterService } from '../services/router.service';
