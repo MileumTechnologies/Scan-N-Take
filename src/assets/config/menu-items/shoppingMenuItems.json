@@ -1,0 +1,34 @@
+[{
+	"name": {
+		"en": "Start Shopping",
+		"hr": "Započni Kupovinu"
+	},
+	"description": {
+		"en": "Start shopping desc.",
+		"hr": ""
+	},
+	"page": "shopping-cart",
+	"imgUrl": ""
+}, {
+	"name": {
+		"en": "Discounts",
+		"hr": "Popusti"
+	},
+	"description": {
+		"en": "Your discounts.",
+		"hr": ""
+	},
+	"page": "DiscountsPage",
+	"imgUrl": ""
+}, {
+	"name": {
+		"en": "Whishlist",
+		"hr": "Popis želja"
+	},
+	"description": {
+		"en": "Your whishlist.",
+		"hr": ""
+	},
+	"page": "WhishlistPage",
+	"imgUrl": ""
+}]

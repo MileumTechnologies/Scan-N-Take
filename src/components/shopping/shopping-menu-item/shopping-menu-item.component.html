@@ -1,0 +1,9 @@
+<ion-card (click)='goToPage(itemData?.page)'>
+  <img src="{{ itemData?.imgUrl }}"/>
+  <ion-card-header>
+    {{ itemData?.name.en }}
+  </ion-card-header>
+  <ion-card-content>
+    {{ itemData?.description.en }}
+  </ion-card-content>
+</ion-card>

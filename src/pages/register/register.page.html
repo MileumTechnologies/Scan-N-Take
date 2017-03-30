@@ -1,0 +1,63 @@
+<ion-content class='register w3-animate-bottom background' overflow-scroll="false">
+
+  <div class='register-form-wrapper'>
+    <form class='register-content' (ngSubmit)='register()'>
+
+      <ion-item class='full-name no-padding'>
+
+        <ion-label floating>Full Name</ion-label>
+        <ion-input [(ngModel)]='user.fullName' name='fullName'></ion-input>
+
+      </ion-item>
+
+      <ion-item class='username no-padding'>
+
+        <ion-label floating>Username</ion-label>
+        <ion-input [(ngModel)]='user.username' name='username'></ion-input>
+
+      </ion-item>
+
+      <ion-item class='email no-padding' [ngClass]="{'field-error': !validateEmail(user.email) && user.email}">
+
+        <ion-label floating>Email</ion-label>
+        <ion-input type='email' [(ngModel)]='user.email' name='email'></ion-input>
+
+      </ion-item>
+
+      <ion-item class='password no-padding'>
+
+        <ion-label floating>Password</ion-label>
+        <ion-input type='password' [(ngModel)]='user.password' name='password'></ion-input>
+
+      </ion-item>
+
+      <div class='register-button-wrapper'>
+        <button type='submit' class='register-button' [disabled]='!user.fullName || !user.email || !user.password || !user.password'> Register </button>      
+      </div>
+
+    </form>
+
+  </div>
+  
+    <div class='or'>
+        <p> OR </p>
+    </div>
+
+    <div class='googleSU-button-wrapper'>
+      <button class='googleSU-button'>
+         <i class="fa fa-google" aria-hidden="true"></i>
+         <p> Sign up with Google </p>
+      </button>
+    </div>
+
+    <div class='facebookSU-button-wrapper'>
+      <button class='facebookSU-button'>
+         <i class="fa fa-facebook" aria-hidden="true"></i>
+         <p> Sign up with Facebook </p>
+      </button>
+    </div>
+
+    <!--<div class='register-link-wrapper'>
+      <a (click)='redirectToLogin()'> or log in here if you're a member. </a> 
+    </div>-->
+</ion-content>
