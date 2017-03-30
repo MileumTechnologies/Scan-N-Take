@@ -19,6 +19,7 @@ import { HelpPage } from '../pages/help/help.page';
 import { FeedbackPage } from '../pages/feedback/feedback.page';
 import { ShoppingCartPage } from '../pages/shopping-cart/shopping-cart.page';
 
+
 // Components
 import { AlertComponent } from '../pages/alert/alert.page';
 import { HomeMenuComponent } from '../components/home/home-menu/home-menu.component';
