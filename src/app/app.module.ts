@@ -68,7 +68,10 @@ import { ProductDetailsService } from '../services/product-details.service';
         ShoppingCartListComponent,
         ShoppingCartListItemComponent,
         ItemScannerComponent,
-        ShoppingCartPage
+        ShoppingCartPage,
+        ShoppingCartListComponent,
+        ShoppingCartListItemComponent,
+        ItemScannerComponent
     ],
     imports: [
         IonicModule.forRoot(MyApp)
@@ -100,7 +103,10 @@ import { ProductDetailsService } from '../services/product-details.service';
         ShoppingCartListComponent,
         ShoppingCartListItemComponent,
         ItemScannerComponent,
-        ShoppingCartPage
+        ShoppingCartPage,
+        ShoppingCartListComponent,
+        ShoppingCartListItemComponent,
+        ItemScannerComponent
     ],
     providers: [
         Storage, RouterService, RegisterService, LoginService, AlertService, MessageBus, MenuDataService, BarcodeScanner, ProductDetailsService,

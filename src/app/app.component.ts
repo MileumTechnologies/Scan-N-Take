@@ -15,7 +15,7 @@ import { BillingPage } from '../pages/billing/billing.page';
 import { LanguagePage } from '../pages/language/language.page';
 import { SettingsPage } from '../pages/settings/settings.page';
 import { HelpPage } from '../pages/help/help.page';
-import { FeedbackPage } from '../pages/feedback/feedback.page'
+import { FeedbackPage } from '../pages/feedback/feedback.page';
 import { ShoppingCartPage } from '../pages/shopping-cart/shopping-cart.page';
 
 // Components
