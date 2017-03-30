@@ -1,0 +1,24 @@
+<ion-card>
+
+    <img src="" />
+
+    <ion-card-header>
+
+        <ion-card-title class='name'> {{ itemData?.name }} </ion-card-title>
+        <div class='packaging'> {{ itemData?.packaging }} </div>
+
+    </ion-card-header>
+
+    <ion-card-content>
+
+        <div class='price'> {{ itemData?.price }} </div>
+        <div class='quantity'> {{ itemData?.quantity }} </div>
+        <div class='actions'>
+            <a (click)='remove()'> Remove </a>
+            |
+            <a> Add to list </a>
+        </div>
+
+    </ion-card-content>
+
+</ion-card>

@@ -1,8 +1,7 @@
-import { Component, Input, EventEmitter } from '@angular/core';
+import { Component } from '@angular/core';
 import { App } from 'ionic-angular';
 
 import { RouterService } from '../../services/router.service';
-import { AlertComponent } from '../alert/alert.page';
 import { MessageBus } from '../../services/message-bus.service';
 
 @Component({
@@ -10,9 +9,7 @@ import { MessageBus } from '../../services/message-bus.service';
     templateUrl: './header.page.html'
 })
 export class HeaderPage {
-    @Input() menuContent: any;
     private navCtrl: any;
-    private emitter: EventEmitter<any>;
 
     constructor(private app: App, private router: RouterService, private messageBus: MessageBus) { }
 

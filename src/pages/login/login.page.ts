@@ -7,8 +7,6 @@ import { RouterService } from '../../services/router.service';
 import { AlertService } from '../../services/alert.service';
 import { MessageBus } from '../../services/message-bus.service';
 
-import { RegisterPage } from '../register/register.page';
-
 @Component({
     selector: 'login-page',
     templateUrl: 'login.page.html'
