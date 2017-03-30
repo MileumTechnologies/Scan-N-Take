@@ -1,14 +1,16 @@
-import { Component } from '@angular/core';
-import { ShoppingMenuComponent } from '../../components/shopping/shopping-menu/shopping-menu.component';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
     selector: 'shopping-page',
     templateUrl: 'shopping.page.html'
 })
-export class ShoppingPage {
+export class ShoppingPage implements OnInit {
     static title: string = 'Shopping';
 
-    constructor() {
-        console.log('ShoppingPage');
+    constructor() {}
+
+    ngOnInit() {
+        const timestamp = new Date();
+        console.log(timestamp.toLocaleTimeString(), ' ShoppingPage initialized.');
     }
 }

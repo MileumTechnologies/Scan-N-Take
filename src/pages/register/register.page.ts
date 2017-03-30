@@ -4,8 +4,6 @@ import { AlertController, NavController } from 'ionic-angular';
 import { RegisterService } from '../../services/register.service';
 import { AlertService } from '../../services/alert.service';
 
-import { LoginPage } from '../login/login.page';
-
 @Component({
     selector: 'register-page',
     templateUrl: 'register.page.html'

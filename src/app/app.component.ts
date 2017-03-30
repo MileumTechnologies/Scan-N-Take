@@ -1,7 +1,7 @@
 import { Component, ViewChild, Inject } from '@angular/core';
 import { Platform, NavController } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
-import { Storage } from '@ionic/storage';
+import { Storage } from '@ionic/storage'; 
 
 // Pages
 import { WelcomePage } from '../pages/welcome/welcome.page';
@@ -16,9 +16,9 @@ import { LanguagePage } from '../pages/language/language.page';
 import { SettingsPage } from '../pages/settings/settings.page';
 import { HelpPage } from '../pages/help/help.page';
 import { FeedbackPage } from '../pages/feedback/feedback.page'
+import { ShoppingCartPage } from '../pages/shopping-cart/shopping-cart.page';
 
 // Components
-import { AlertComponent } from '../pages/alert/alert.page';
 
 // Services
 import { MessageBus } from '../services/message-bus.service';
