@@ -16,7 +16,8 @@ import { BillingPage } from '../pages/billing/billing.page';
 import { LanguagePage } from '../pages/language/language.page';
 import { SettingsPage } from '../pages/settings/settings.page';
 import { HelpPage } from '../pages/help/help.page';
-import { FeedbackPage } from '../pages/feedback/feedback.page'
+import { FeedbackPage } from '../pages/feedback/feedback.page';
+import { ShoppingCartPage } from '../pages/shopping-cart/shopping-cart.page';
 
 // Components
 import { AlertComponent } from '../pages/alert/alert.page';
@@ -26,6 +27,9 @@ import { HeaderMenuComponent } from '../components/header/header-menu/header-men
 import { HeaderMenuItemComponent } from '../components/header/header-menu-item/header-menu-item.component'
 import { ShoppingMenuComponent } from '../components/shopping/shopping-menu/shopping-menu.component';
 import { ShoppingMenuItemComponent } from '../components/shopping/shopping-menu-item/shopping-menu-item.component';
+import { ShoppingCartListComponent } from '../components/shopping-cart/shopping-cart-list/shopping-cart-list.component';
+import { ShoppingCartListItemComponent } from '../components/shopping-cart/shopping-cart-list-item/shopping-cart-list-item.component';
+import { ItemScannerComponent } from '../components/item-scanner/item-scanner.component';
 
 // Services
 import { RouterService } from '../services/router.service';
@@ -34,6 +38,8 @@ import { LoginService } from '../services/login.service';
 import { AlertService } from '../services/alert.service';
 import { MessageBus } from '../services/message-bus.service';
 import { MenuDataService } from '../services/menu-data.service';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { ProductDetailsService } from '../services/product-details.service';
 
 @NgModule({
     declarations: [
@@ -41,6 +47,7 @@ import { MenuDataService } from '../services/menu-data.service';
         WelcomePage,
         HomePage,
         ShoppingPage,
+        ShoppingCartPage,
         LoginPage,
         RegisterPage,
         ErrorPage,
@@ -57,7 +64,11 @@ import { MenuDataService } from '../services/menu-data.service';
         LanguagePage,
         HelpPage,
         SettingsPage,
-        FeedbackPage
+        FeedbackPage,
+        ShoppingCartListComponent,
+        ShoppingCartListItemComponent,
+        ItemScannerComponent,
+        ShoppingCartPage
     ],
     imports: [
         IonicModule.forRoot(MyApp)
@@ -68,6 +79,7 @@ import { MenuDataService } from '../services/menu-data.service';
         WelcomePage,
         HomePage,
         ShoppingPage,
+        ShoppingCartPage,
         LoginPage,
         RegisterPage,
         ErrorPage,
@@ -84,10 +96,14 @@ import { MenuDataService } from '../services/menu-data.service';
         LanguagePage,
         HelpPage,
         SettingsPage,
-        FeedbackPage
+        FeedbackPage,
+        ShoppingCartListComponent,
+        ShoppingCartListItemComponent,
+        ItemScannerComponent,
+        ShoppingCartPage
     ],
     providers: [
-        Storage, RouterService, RegisterService, LoginService, AlertService, MessageBus, MenuDataService,
+        Storage, RouterService, RegisterService, LoginService, AlertService, MessageBus, MenuDataService, BarcodeScanner, ProductDetailsService,
         { provide: ErrorHandler, useClass: IonicErrorHandler },]
 })
 export class AppModule { }

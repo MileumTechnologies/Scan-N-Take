@@ -1,4 +1,4 @@
-import { Component, ViewChild, Inject } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { Platform, NavController } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 import { Storage } from '@ionic/storage';
@@ -16,9 +16,9 @@ import { LanguagePage } from '../pages/language/language.page';
 import { SettingsPage } from '../pages/settings/settings.page';
 import { HelpPage } from '../pages/help/help.page';
 import { FeedbackPage } from '../pages/feedback/feedback.page'
+import { ShoppingCartPage } from '../pages/shopping-cart/shopping-cart.page';
 
 // Components
-import { AlertComponent } from '../pages/alert/alert.page';
 
 // Services
 import { MessageBus } from '../services/message-bus.service';
@@ -29,9 +29,9 @@ import { RouterService } from '../services/router.service';
 })
 export class MyApp {
     @ViewChild('nav') nav: NavController
-    rootPage: any = WelcomePage;
+    rootPage: any = ShoppingCartPage;
 
-    constructor(platform: Platform, private routerService: RouterService, private storage: Storage, @Inject(MessageBus) private messageBus: MessageBus) {
+    constructor(platform: Platform, private routerService: RouterService, private storage: Storage, private messageBus: MessageBus) {
         platform.ready().then(() => {
             // Okay, so the platform is ready and our plugins are available.
             // Here you can do any higher level native things you might need.
@@ -128,6 +128,10 @@ export class MyApp {
             case 'feedback': {
                 this.nav.push(FeedbackPage);
                 break;
+            }
+            case 'shopping-cart': {
+              this.nav.push(ShoppingCartPage);
+              break;
             }
         }
     }

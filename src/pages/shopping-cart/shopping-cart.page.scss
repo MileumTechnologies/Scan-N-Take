@@ -1,0 +1,22 @@
+shopping-cart-page hr {
+    width: 90%;
+    margin: auto;
+    border-width: 1;
+    border-top: 1px solid;
+}
+
+shopping-cart-page .checkout {
+    position: absolute;
+    bottom: 70px;
+    width: 100%;
+}
+
+shopping-cart-page .checkout-total-price {
+    margin-left: 5%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+shopping-cart-page .checkout-button {
+    margin-left: 5%;
+}
