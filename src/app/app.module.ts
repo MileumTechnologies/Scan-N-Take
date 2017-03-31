@@ -67,8 +67,7 @@ import { ProductDetailsService } from '../services/product-details.service';
         FeedbackPage,
         ShoppingCartListComponent,
         ShoppingCartListItemComponent,
-        ItemScannerComponent,
-        ShoppingCartPage
+        ItemScannerComponent
     ],
     imports: [
         IonicModule.forRoot(MyApp)
@@ -99,8 +98,7 @@ import { ProductDetailsService } from '../services/product-details.service';
         FeedbackPage,
         ShoppingCartListComponent,
         ShoppingCartListItemComponent,
-        ItemScannerComponent,
-        ShoppingCartPage
+        ItemScannerComponent
     ],
     providers: [
         Storage, RouterService, RegisterService, LoginService, AlertService, MessageBus, MenuDataService, BarcodeScanner, ProductDetailsService,
