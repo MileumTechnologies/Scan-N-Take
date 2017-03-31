@@ -2,7 +2,8 @@ header-page .header {
     position: absolute;
     width: 100%;
     height: 55px;
-    background: rgba(0, 0, 0, 0.65);
+    background-color: rgba(0, 0, 0, 0.65);
+    background-image: url('../assets/header-pic/header.jpg');
 }
 
 header-page .back-wrapper {

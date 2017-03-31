@@ -21,13 +21,15 @@ home-menu-item .home-menu-item-wrapper {
 home-menu-item .home-item-name {
     background: rgba(0.2, 0.2, 0.2, 0.7);
     position: sticky;
-    margin-top: -25px;
+    margin-top: -35px;
     padding-left: 20px;
     color: white;
+    text-shadow: 1px 1px 1px #000;
+    font-size: 20px;
 }
 
 home-menu-item .home-item-description {
-    font-size: 1.1rem;
+    font-size: 12px;
     padding: 5px;
     margin-left: 15px;
 }
