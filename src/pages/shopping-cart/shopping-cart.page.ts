@@ -7,7 +7,7 @@ import { MessageBus } from '../../services/message-bus.service';
 })
 export class ShoppingCartPage implements OnInit {
     public title: string = 'Shopping Cart';
-    public totalPrice: number = 0; 
+    public totalPrice: number = 0;
 
     constructor(private messageBus: MessageBus) {}
 
