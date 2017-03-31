@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 import { MessageBus } from '../../../services/message-bus.service';
 
 @Component({
