@@ -72,16 +72,19 @@ login-page .register-link-wrapper {
   margin-top: 20px;
   text-align: center;
 }
-/*
 
-Now in backgrounds.scss
+login-page .input-wrapper {
+  display: block;
+}
+
+// Now in backgrounds.scss
 
 login-page .background {
 	background-image: url("../../assets/background/background.jpg");
 	background-repeat: no-repeat;
 	background-size: 250% 100%;
 	background-position: 40% 0;
-}*/
+}
 
 
 
@@ -152,7 +155,7 @@ login-page .facebook-login-button {
 login-page .signIn-ToS {
   margin-top: 40px;
   margin-left: 10px;
-  margin-right: 10px; 
+  margin-right: 10px;
   color: #FFF;
 }
 

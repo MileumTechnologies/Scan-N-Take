@@ -7,15 +7,15 @@ welcome-page span {
 	font-weight: bold;
 }
 
-/*
-Now in backgrounds.scss
+
+// Now in backgrounds.scss
 welcome-page .background {
 	background-image: url("../../assets/background/background.jpg");
 	background-repeat: no-repeat;
 	background-size: 250% 100%;
 	background-position: 40% 0;
 }
-*/
+
 
 welcome-page .content-wrapper {
 	background: rgba(0, 0, 0, 0.65);
@@ -138,4 +138,3 @@ welcome-page .button-divider {
 	color: #FFF;
     font-size: 25px;
 }
-

@@ -21,8 +21,8 @@ register-page .register-content {
   margin: 0 auto;
 }
 
-/*
-Now in backgrounds.scss
+
+// Now in backgrounds.scss
 
 register-page .background {
   background-image: url("../../assets/background/background.jpg");
@@ -31,7 +31,7 @@ register-page .background {
 	background-position: 40% 0;
 }
 
-*/
+
 
 register-page .full-name, .username, .email, .password, .repeat-password {
   background-color: rgba(255, 0, 0, 0);
