@@ -2,7 +2,6 @@
 
   <div class='register-form-wrapper'>
     <div class='form-background'>
-
     <form class='register-content' (ngSubmit)='register()'>
 
       <ion-item class='full-name no-padding'>
@@ -34,23 +33,27 @@
       </ion-item>
 
       <div class='register-button-wrapper'>
-        <button type='submit' class='register-button' [disabled]='!user.fullName || !user.email || !user.password || !user.password'> Register </button>      
+        <button type='submit' class='register-button' [disabled]='!user.fullName || !user.email || !user.password || !user.password'> Register </button>
       </div>
 
     </form>
 
     </div>
   </div>
-  
+
     <div class='or'>
         <p> OR </p>
     </div>
 
  <!--   <div class='googleSU-button-wrapper'>
+=======
+    <div class='googleSU-button-wrapper'>
+>>>>>>> 1ef243d... Initial.
       <button class='googleSU-button'>
          <i class="fa fa-google" aria-hidden="true"></i>
          <p> Sign up with Google </p>
       </button>
+<<<<<<< HEAD
     </div> -->
 
     <div class='facebookSU-button-wrapper'>
@@ -61,6 +64,6 @@
     </div>
 
     <!--<div class='register-link-wrapper'>
-      <a (click)='redirectToLogin()'> or log in here if you're a member. </a> 
+      <a (click)='redirectToLogin()'> or log in here if you're a member. </a>
     </div>-->
 </ion-content>

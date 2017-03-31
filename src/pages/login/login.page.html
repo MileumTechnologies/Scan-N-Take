@@ -33,35 +33,70 @@
     </div>
 
     <!-- <div class='or'>
+=======
+  <div class='login-form-wrapper'>
+    <form class='login-content' (ngSubmit)='login()'>
+
+      <ion-item class='username no-padding'>
+
+        <ion-label floating>Username</ion-label>
+        <ion-input [(ngModel)]='user.username' name='username'></ion-input>
+
+      </ion-item>
+
+      <ion-item class='password no-padding'>
+
+        <ion-label floating>Password</ion-label>
+        <ion-input type='password' [(ngModel)]='user.password' name='password'></ion-input>
+
+      </ion-item>
+
+      <div class='forgot-pass'> <a href='#'> Forgot password? </a> </div>
+
+      <div class='login-button-wrapper'>
+        <button type='submit' class='login-button' [disabled]='!user.username || !user.password'> Log In </button>
+      </div>
+
+    </form>
+  </div>
+
+    <div class='or'>
+>>>>>>> 1ef243d... Initial.
         <p> OR </p>
     </div>
 
     <div class='googleLI-button-wrapper'>
-      <button class='google-login-button'> 
+      <button class='google-login-button'>
         <i class="fa fa-google" aria-hidden="true"></i>
         <p> Log In with Google </p>
       </button>
     </div>
 
     <div class='facebookLI-button-wrapper'>
-      <button class='facebook-login-button'> 
+      <button class='facebook-login-button'>
         <i class="fa fa-facebook" aria-hidden="true"></i>
         <p> Log In with Facebook </p>
       </button>
+<<<<<<< HEAD
     </div> -->
 
     <!---  <div class='signIn-ToS'>
-      <p> By signing in, I agree to Scan'N'Take's 
-        <a href='#'>Terms of Service </a>, 
+=======
+    </div>
+
+  <!-  <div class='signIn-ToS'>
+>>>>>>> 1ef243d... Initial.
+      <p> By signing in, I agree to Scan'N'Take's
+        <a href='#'>Terms of Service </a>,
         <a href='#'> Non-Discrimination Policy </a>,
-        <a href='#'> Payments Terms of Service </a>, 
-        <a href='#'> Privacy Policy </a>, 
-        <a href='#'> Shop Refund Policy </a>, and 
-        <a href='#'> Host Guarantee Terms </a>. 
+        <a href='#'> Payments Terms of Service </a>,
+        <a href='#'> Privacy Policy </a>,
+        <a href='#'> Shop Refund Policy </a>, and
+        <a href='#'> Host Guarantee Terms </a>.
       </p>
     </div> ---->
 
     <!--<div class='register-link-wrapper'>
-      <a (click)='redirectToRegister()'> or register here if not a member. </a> 
+      <a (click)='redirectToRegister()'> or register here if not a member. </a>
     </div>-->
 </ion-content>

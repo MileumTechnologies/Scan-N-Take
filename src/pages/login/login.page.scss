@@ -8,6 +8,7 @@ login-page .form-background {
   background: rgba(0, 0, 0, 0.65);
   text-align: center;
   margin: auto;
+  margin-top: 100px;
 }
 
 login-page .login {
@@ -67,6 +68,13 @@ login-page .login-button {
   box-shadow: 0px 0px 7px -1px #000;
 }
 
+login-page .or {
+  font-size: 18px;
+  color: #FFF;
+  text-align: center;
+  margin-top: 30px;
+}
+
 login-page .register-link-wrapper {
   width: 100%;
   margin-top: 20px;
@@ -77,89 +85,9 @@ login-page .input-wrapper {
   display: block;
 }
 
-// Now in backgrounds.scss
-
 login-page .background {
 	background-image: url("../../assets/background/background.jpg");
 	background-repeat: no-repeat;
 	background-size: 250% 100%;
 	background-position: 40% 0;
 }
-
-
-
-/*
-Facebook & Google buttons, ToS
-
-login-page .or {
-  font-size: 18px;
-  color: #FFF;
-  text-align: center;
-  margin-top: 30px;
-}
-
-login-page .googleLI-button-wrapper {
-  width: 100%;
-  text-align: center;
-}
-
-login-page .google-login-button i {
-text-align: left;
-color: #FFF;
-padding-right: 35px;
-}
-
-login-page .google-login-button p {
-color: #FFF;
-display: inline;
-padding-right: 40px;
-}
-
-login-page .google-login-button {
-  width: 240px;
-  height: 45px;
-  background: #df482e;
-  border: 1px solid #df482e;
-  border-radius: 5px;
-  box-shadow: 0px 0px 7px -1px #000;
-  margin-top: 10px;
-}
-
-login-page .facebookLI-button-wrapper {
-  width: 100%;
-  text-align: center;
-  margin-top: 15px;
-}
-
-login-page .facebook-login-button i {
-text-align: left;
-color: #FFF;
-padding-right: 32px;
-}
-
-login-page .facebook-login-button p {
-color: #FFF;
-display: inline;
-padding-right: 35px;
-}
-
-login-page .facebook-login-button {
-  width: 240px;
-  height: 45px;
-  background: #3c66c4;
-  border: 1px solid #3c66c4;
-  border-radius: 5px;
-  box-shadow: 0px 0px 7px -1px #000;
-}
-
-login-page .signIn-ToS {
-  margin-top: 40px;
-  margin-left: 10px;
-  margin-right: 10px;
-  color: #FFF;
-}
-
-login-page .signIn-ToS p a {
-  color: #FFF;
-  font-size: 14px;
-}*/

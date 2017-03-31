@@ -1,7 +1,7 @@
 [{
 	"name": {
-		"en": "START SHOPPING",
-		"hr": "Započnite kupovinu"
+		"en": "Shopping",
+		"hr": "Kupovina"
 	},
 	"description": {
 		"en": "Your shopping list.",
@@ -11,7 +11,7 @@
 	"imgUrl": "../assets/menu-backgrounds/shopping.jpg"
 }, {
 	"name": {
-		"en": "DISCOUNTS",
+		"en": "Discounts",
 		"hr": "Popusti"
 	},
 	"description": {
@@ -22,7 +22,7 @@
 	"imgUrl":  "../assets/menu-backgrounds/discount.jpg"
 }, {
 	"name": {
-		"en": "WHISTLIST",
+		"en": "Whishlist",
 		"hr": "Popis želja"
 	},
 	"description": {

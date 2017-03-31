@@ -21,7 +21,6 @@ register-page .register-content {
   margin: 0 auto;
 }
 
-
 // Now in backgrounds.scss
 
 register-page .background {
@@ -30,8 +29,6 @@ register-page .background {
 	background-size: 250% 100%;
 	background-position: 40% 0;
 }
-
-
 
 register-page .full-name, .username, .email, .password, .repeat-password {
   background-color: rgba(255, 0, 0, 0);
@@ -86,37 +83,6 @@ register-page .back i {
   font-size: 50px;
   margin-left: 10px;
 }
-
-/*
-
-Google Button
-
-register-page .googleSU-button-wrapper {
-  width: 100%;
-  text-align: center;
-}
-
-register-page .googleSU-button i {
-  text-align: left;
-  color: #FFF;
-  padding-right: 35px;
-}
-
-register-page .googleSU-button p {
-  color: #FFF;
-  display: inline;
-  padding-right: 40px;
-}
-
-register-page .googleSU-button {
-  width: 240px;
-  height: 45px;
-  background: #df482e;
-  border: 1px solid #df482e;
-  border-radius: 5px;
-  box-shadow: 0px 0px 7px -1px #000;
-  margin-top: 10px;
-}*/
 
 register-page .facebookSU-button-wrapper {
   width: 100%;
