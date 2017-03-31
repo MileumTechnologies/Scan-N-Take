@@ -19,29 +19,27 @@ export class ShoppingCartListComponent implements OnInit {
                     this.addItemToCart(message.data);
                 } else if (message.command === 'removeItemFromCart') {
                     this.remoteItemFromCart(message.data);
+                  }
                 }
-            }
-        );
-
-        
-        // this.messageBus.emit({ command: 'addItemToCart', data: {
-        //     name: 'Cocca Colla',
-        //     packaging: '50ml',
-        //     price: 20.00,
-        //     quantity: 1
-        // }});
-        // this.messageBus.emit({ command: 'addItemToCart', data: {
-        //     name: 'Cocca Colla',
-        //     packaging: '50ml',
-        //     price: 20.00,
-        //     quantity: 1
-        // }});
-        // this.messageBus.emit({ command: 'addItemToCart', data: {
-        //     name: 'Cocca Colla',
-        //     packaging: '200ml',
-        //     price: 20.00,
-        //     quantity: 1
-        // }});
+              );
+        this.messageBus.emit({ command: 'addItemToCart', data: {
+            name: 'Cocca Colla',
+            packaging: '50ml',
+            price: 20.00,
+            quantity: 1
+        }});
+        this.messageBus.emit({ command: 'addItemToCart', data: {
+            name: 'Cocca Colla',
+            packaging: '50ml',
+            price: 20.00,
+            quantity: 1
+        }});
+        this.messageBus.emit({ command: 'addItemToCart', data: {
+            name: 'Cocca Colla',
+            packaging: '200ml',
+            price: 20.00,
+            quantity: 1
+        }});
     }
 
     private addItemToCart(item: any) {
