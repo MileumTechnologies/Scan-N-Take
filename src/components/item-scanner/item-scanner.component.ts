@@ -34,21 +34,13 @@ export class ItemScannerComponent implements OnInit {
 
     fakeBarcodeScan() {
         console.log("fakeBarcodeScan");
-<<<<<<< HEAD
         this.productDetailsService.getProductDetails('0012345678905').subscribe(
-=======
-        this.productDetailsService.getProductDetails('1238905').subscribe(
->>>>>>> 54db77b... Barcode scanner changes.
             (response: any) => {
                 this.messageBus.emit({
                     command: 'addItemToCart', data: {
                         name: response.name,
                         packaging: response.packaging,
-<<<<<<< HEAD
                         price: parseFloat(response.price),
-=======
-                        price: response.price,
->>>>>>> 54db77b... Barcode scanner changes.
                         quantity: 1
                     }
                 });
