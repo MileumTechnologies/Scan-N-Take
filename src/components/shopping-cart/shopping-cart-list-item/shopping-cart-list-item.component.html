@@ -4,15 +4,15 @@
 
     <ion-card-header>
 
-        <ion-card-title class='name'> {{ itemData?.name }} </ion-card-title>
-        <div class='packaging'> {{ itemData?.packaging }} </div>
+        <ion-card-title class='name'>Name: {{ itemData?.name }} </ion-card-title>
+        <div class='packaging'>Packaging: {{ itemData?.packaging }} </div>
 
     </ion-card-header>
 
     <ion-card-content>
 
-        <div class='price'> {{ itemData?.price }} </div>
-        <div class='quantity'> {{ itemData?.quantity }} </div>
+        <div class='price'>Price: {{ itemData?.price }} </div>
+        <div class='quantity'>Quantity: {{ itemData?.quantity }} </div>
         <div class='actions'>
             <a (click)='remove()'> Remove </a>
             |

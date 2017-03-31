@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
-import { HeaderMenuItemComponent } from '../header-menu-item/header-menu-item.component';
 import { MenuDataService } from '../../../services/menu-data.service';
+import { MessageBus } from '../../../services/message-bus.service';
 
 @Component({
     selector: 'header-menu',
     templateUrl: 'header-menu.component.html'
 })
 export class HeaderMenuComponent {
-    public headerMenuItems: HeaderMenuItemComponent[];
+    public headerMenuItems: any[];
 
-    constructor(private menuDataService: MenuDataService) {
+    constructor(private menuDataService: MenuDataService, private messageBus: MessageBus) {
         this.menuDataService.getData('header').subscribe(
             (data) => {
                 this.headerMenuItems = data;
@@ -17,5 +17,9 @@ export class HeaderMenuComponent {
         );
     }
 
-    
+    public logout(): void {
+      localStorage.removeItem('id');
+      this.messageBus.emit({ command: 'changeAppRootPage', data: 'welcome' });
+    }
+
 }

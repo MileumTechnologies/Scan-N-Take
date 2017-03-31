@@ -53,9 +53,6 @@ export class MyApp {
                 else if(message.command === 'changeAppPage') {
                     this.changeAppPage(message.data);
                 }
-                else if(message.command === 'logout') {
-                    this.logout();
-                }
                 console.log('Message received: ', message);
             }
         )
@@ -136,8 +133,7 @@ export class MyApp {
         }
     }
 
-    logout() {
-        localStorage.removeItem('id');
-        this.changeAppRootPage('welcome');
+    loggedIn(): boolean {
+      return localStorage.getItem('id') != null;
     }
 }
