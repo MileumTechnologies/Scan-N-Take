@@ -30,7 +30,7 @@ import { RouterService } from '../services/router.service';
 })
 export class MyApp {
     @ViewChild('nav') nav: NavController
-    rootPage: any = ShoppingCartPage;
+    rootPage: any = WelcomePage;
 
     constructor(platform: Platform, private routerService: RouterService, private storage: Storage, private messageBus: MessageBus) {
         platform.ready().then(() => {
