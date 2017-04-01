@@ -1,24 +1,26 @@
-
 <ion-card>
-    <!---<img src="" />-->
+    <div class='image-container'>
+        <img src="http://www.coca-colacompany.com/content/dam/journey/us/en/private/2015/02/chronology10-1280-900-bfb7f27c.jpg">
+    </div>
     <ion-card-header>
 
-        <ion-card-title class='name'>{{ itemData?.name }} </ion-card-title>
-        <div class='packaging'>Packaging: {{ itemData?.packaging }} </div>
+        <ion-card-title class='name'>
+            {{ itemData?.name }}
+            <span class='packaging' *ngIf='itemData.packaging'>
+                ( {{ itemData?.packaging }} )
+            </span>
+        </ion-card-title>
+        <!-- <div class='packaging'>Packaging: {{ itemData?.packaging }} </div> -->
 
     </ion-card-header>
 
     <ion-card-content>
-        <div class='image-container'>
-             <img src="http://www.coca-colacompany.com/content/dam/journey/us/en/private/2015/02/chronology10-1280-900-bfb7f27c.jpg"> 
-        </div>
         <div class='price'>Price: {{ itemData?.price }} </div>
         <div class='quantity'>QTY: {{ itemData?.quantity }} </div>
-        <!-- <div class='actions'>
-            <a (click)='remove()'> Remove </a>
-            |
+        <div class='actions'>
+            <a (click)='remove()'> Remove </a> |
             <a> Add to list </a>
-        </div> -->
+        </div>
 
     </ion-card-content>
 
