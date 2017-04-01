@@ -10,6 +10,7 @@ import { ProductDetailsService } from '../../services/product-details.service';
 export class ItemScannerComponent implements OnInit {
     results: any;
     options: BarcodeScannerOptions;
+  
 
     constructor(private barcodeScanner: BarcodeScanner, private messageBus: MessageBus, private productDetailsService: ProductDetailsService) {
     }

@@ -129,6 +129,12 @@ export class MyApp {
               this.nav.push(ShoppingCartPage);
               break;
             }
+            case 'logout': {
+                localStorage.removeItem("id");
+              //  this.changeAppRootPage('home');
+                break;
+            } 
+
         }
     }
 

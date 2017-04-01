@@ -3,10 +3,6 @@
 		"en": "Account",
 		"hr": ""
 	},
-	"description": {
-		"en": "",
-		"hr": ""
-	},
 	"page": "account",
 	"imgUrl": ""
 }, {
@@ -14,19 +10,11 @@
 		"en": "Billing",
 		"hr": ""
 	},
-	"description": {
-		"en": "",
-		"hr": ""
-	},
 	"page": "billing",
 	"imgUrl": ""
 }, {
 	"name": {
 		"en": "Language",
-		"hr": ""
-	},
-	"description": {
-		"en": "",
 		"hr": ""
 	},
 	"page": "language",
@@ -64,4 +52,10 @@
 	},
 	"page": "feedback",
 	"imgUrl": ""
+}, {
+	"name": {
+		"en": "Logout"
+	},
+	"imgUrl": "",
+	"page": "logout"
 }]
