@@ -55,4 +55,8 @@ export class HeaderPage {
             return true;
         return false;
     }
+
+    nesto() {
+        
+    }
 }
