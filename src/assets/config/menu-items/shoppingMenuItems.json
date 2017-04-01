@@ -8,27 +8,27 @@
 		"hr": ""
 	},
 	"page": "shopping-cart",
-	"imgUrl": ""
+	"imgUrl": "assets/shopping-menu-backgrounds/startshopping.jpg"
 }, {
 	"name": {
-		"en": "Discounts",
-		"hr": "Popusti"
+		"en": "Buy list",
+		"hr": "Lista za kupnju"
 	},
 	"description": {
-		"en": "Your discounts.",
+		"en": "Create your buy list.",
 		"hr": ""
 	},
 	"page": "DiscountsPage",
-	"imgUrl": ""
+	"imgUrl": "assets/shopping-menu-backgrounds/buylist.jpg"
 }, {
 	"name": {
-		"en": "Whishlist",
-		"hr": "Popis želja"
+		"en": "Shopping history",
+		"hr": "Povijest kupnje"
 	},
 	"description": {
-		"en": "Your whishlist.",
+		"en": "Your shopping history.",
 		"hr": ""
 	},
 	"page": "WhishlistPage",
-	"imgUrl": ""
+	"imgUrl": "assets/shopping-menu-backgrounds/shoppinghistory.jpg"
 }]

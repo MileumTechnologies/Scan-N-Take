@@ -88,6 +88,8 @@ login-page .input-wrapper {
 login-page .background {
 	background-image: url("../assets/background/background.jpg");
 	background-repeat: no-repeat;
-	background-size: 250% 100%;
-	background-position: 40% 0;
+	background-size: 100% 100%;
+	position: absolute;
+  top: 0px;
+	left: 0px;
 }
