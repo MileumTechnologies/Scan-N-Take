@@ -1,23 +1,27 @@
 shopping-cart-list-item .name{
-    margin-top: -10px;
     font-weight: bold;
     font-size: 20px;
+    clear: both; 
+    padding-left: 110px;
+    margin-top: -10px;
 }
 
 shopping-cart-list-item .packaging {
     color: #2d2d2d;
     font-size: 16px;
+    padding-left: 110px;
+    margin-top: -10px;
 }
 
 shopping-cart-list-item .image-container {
     max-width: 110px;
-    height: 100px;
-    margin-top: -70px;
-    float: right;
+    height: 110px;
+    margin-top: -50px;
+    float: left;
 }
 
 shopping-cart-list-item img {
-    max-height: 100px;
+    max-height: 110px;
     width: auto;
 }
 
@@ -25,10 +29,10 @@ shopping-cart-list-item .price {
     font-size: 15px;
     font-weight: bold;
     color: #207a00;
-    clear: both;
+    margin-top: -5px;
 }
 
-shopping-cart-list-item .actions {
+/*shopping-cart-list-item .actions {
     text-align: right;
     margin-top: -22px;
 }
@@ -37,4 +41,4 @@ shopping-cart-list-item a {
     color: #2d2d2d;
     font-weight: bold;
 }
-
+*/
