@@ -1,0 +1,29 @@
+shopping-menu-item ion-card-header{
+    padding: 0px !important;
+    font-weight: bold;
+    color: white;
+}
+
+shopping-menu-item ion-card-content {
+    padding: 0px !important;
+}
+
+shopping-menu-item .shopping-item-image {
+    height: 110px;
+}
+
+shopping-menu-item .shopping-item-description {
+    font-size: 12px;
+    padding: 5px;
+    margin-left: 15px;
+}
+
+shopping-menu-item .shopping-item-name {
+    background: rgba(0.2, 0.2, 0.2, 0.7);
+    position: sticky;
+    margin-top: -35px;
+    padding-left: 20px;
+    color: white;
+    text-shadow: 1px 1px 1px #000;
+    font-size: 20px;
+}

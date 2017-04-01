@@ -1,13 +1,12 @@
 <ion-content>
-
+<div class='card-scroll'>
     <shopping-cart-list></shopping-cart-list>
-
+</div>
     <div class='checkout'>
         <hr/>
-        <div class='checkout-total-price'> TOTAL: ${{ totalPrice.toFixed(2) }} </div>
+        <div class='checkout-total-price'> TOTAL: <span class='price'> ${{ totalPrice.toFixed(2) }} </span> </div>
         <button class='checkout-button' ion-button>Checkout</button>
     </div>
-
     <item-scanner></item-scanner>
 
 </ion-content>

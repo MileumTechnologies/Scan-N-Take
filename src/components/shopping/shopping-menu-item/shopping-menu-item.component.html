@@ -1,9 +1,13 @@
 <ion-card (click)='goToPage(itemData?.page)'>
-  <img src="{{ itemData?.imgUrl }}"/>
   <ion-card-header>
+     <img class='shopping-item-image' src="{{ itemData?.imgUrl }}"/>
+     <div class='shopping-item-name'>
     {{ itemData?.name.en }}
+     </div>
   </ion-card-header>
   <ion-card-content>
+      <div class='shopping-item-description'>
     {{ itemData?.description.en }}
+      </div>
   </ion-card-content>
 </ion-card>
