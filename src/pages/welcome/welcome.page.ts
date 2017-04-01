@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 import { RouterService } from '../../services/router.service';
@@ -8,11 +8,11 @@ import { MessageBus } from '../../services/message-bus.service';
     selector: 'welcome-page',
     templateUrl: 'welcome.page.html'
 })
-export class WelcomePage {
+export class WelcomePage implements OnInit {
 
     constructor(private navController: NavController, private routerService: RouterService, private messageBus: MessageBus) { }
 
-    ngAfterViewInit() {
+    ngOnInit() {
         if (localStorage.getItem('id')) {
             this.messageBus.emit({ command: 'changeAppRootPage', data: 'home' });
         }

@@ -8,7 +8,7 @@
 		"hr": ""
 	},
 	"page": "shopping",
-	"imgUrl": "../assets/menu-backgrounds/shopping.jpg"
+	"imgUrl": "assets/menu-backgrounds/shopping.jpg"
 }, {
 	"name": {
 		"en": "Discounts",
@@ -19,7 +19,7 @@
 		"hr": ""
 	},
 	"page": "DiscountsPage",
-	"imgUrl":  "../assets/menu-backgrounds/discount.jpg"
+	"imgUrl":  "assets/menu-backgrounds/discount.jpg"
 }, {
 	"name": {
 		"en": "Whishlist",
@@ -30,5 +30,5 @@
 		"hr": ""
 	},
 	"page": "WhishlistPage",
-	"imgUrl":  "../assets/menu-backgrounds/wishlist.jpg"
+	"imgUrl":  "assets/menu-backgrounds/wishlist.jpg"
 }]

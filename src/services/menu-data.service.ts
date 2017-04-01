@@ -4,9 +4,9 @@ import { Observable } from 'rxjs/Rx';
 
 @Injectable()
 export class MenuDataService {
-    private homeMenuDataUrl = '../assets/config/menu-items/homeMenuItems.json';
-    private shoppingMenuDataUrl = '../assets/config/menu-items/shoppingMenuItems.json';
-    private headerMenuDataUrl = '../assets/config/menu-items/headerMenuItems.json';
+    private homeMenuDataUrl = 'assets/config/menu-items/homeMenuItems.json';
+    private shoppingMenuDataUrl = 'assets/config/menu-items/shoppingMenuItems.json';
+    private headerMenuDataUrl = 'assets/config/menu-items/headerMenuItems.json';
 
     constructor(private http: Http) {}
 
