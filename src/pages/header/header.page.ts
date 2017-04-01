@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { App } from 'ionic-angular';
 
-import { RouterService } from '../../services/router.service';
 import { MessageBus } from '../../services/message-bus.service';
 
 @Component({
@@ -18,7 +17,7 @@ export class HeaderPage {
     }
 
     goTo(page: string) {
-        this.messageBus.emit({ command: 'changeAppPage', data: page });
+        this.messageBus.emit({ command: 'lol-i-wtf', data: page });
     }
 
     goBack() {
@@ -43,7 +42,7 @@ export class HeaderPage {
 
     isWelcomePage(): boolean {
         if (!this.navCtrl)
-            return true;
+            return false;
 
         if (this.isRootPage() && this.navCtrl._views[0].component.name === 'WelcomePage')
             return true;
