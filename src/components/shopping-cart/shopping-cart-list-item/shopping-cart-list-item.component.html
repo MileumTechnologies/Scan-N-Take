@@ -4,19 +4,23 @@
     </div>
     <ion-card-header>
 
-        <ion-card-title class='name'>{{ itemData?.name }} <span class='packaging'>( {{ itemData?.packaging }} ) </span></ion-card-title>
-       <!-- <div class='packaging'>Packaging: {{ itemData?.packaging }} </div> -->
- 
+        <ion-card-title class='name'>
+            {{ itemData?.name }}
+            <span class='packaging' *ngIf='itemData.packaging'>
+                ( {{ itemData?.packaging }} )
+            </span>
+        </ion-card-title>
+        <!-- <div class='packaging'>Packaging: {{ itemData?.packaging }} </div> -->
+
     </ion-card-header>
 
     <ion-card-content>
         <div class='price'>Price: {{ itemData?.price }} </div>
         <div class='quantity'>QTY: {{ itemData?.quantity }} </div>
         <div class='actions'>
-            <a (click)='remove()'> Remove </a>
-            |
+            <a (click)='remove()'> Remove </a> |
             <a> Add to list </a>
-        </div> 
+        </div>
 
     </ion-card-content>
 
