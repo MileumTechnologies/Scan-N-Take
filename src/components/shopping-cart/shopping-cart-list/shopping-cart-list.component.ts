@@ -23,19 +23,19 @@ export class ShoppingCartListComponent implements OnInit {
               );
         this.messageBus.emit({ command: 'addItemToCart', data: {
             name: 'Cocca Colla',
-            packaging: '50ml',
+            packaging: '',
             price: 20.00,
             quantity: 1
         }});
         this.messageBus.emit({ command: 'addItemToCart', data: {
             name: 'Cocca Colla',
-            packaging: '50ml',
+            packaging: '',
             price: 20.00,
             quantity: 1
         }});
         this.messageBus.emit({ command: 'addItemToCart', data: {
             name: 'Cocca Colla',
-            packaging: '200ml',
+            packaging: '',
             price: 20.00,
             quantity: 1
         }});
