@@ -1,5 +1,5 @@
 register-page .register-form-wrapper {
-  margin-top: 100px;
+  margin-top: 75px;
 }
 
 register-page .form-background {
@@ -12,8 +12,7 @@ register-page .form-background {
 
 register-page .register {
   width: 100%;
-  margin: 0 auto;
-  position: relative;
+ 
 }
 
 register-page .register-content {
@@ -26,14 +25,14 @@ register-page .register-content {
 register-page .background {
   background-image: url("../assets/background/background.jpg");
   background-repeat: no-repeat;
-	background-size: 100% 100%;
+	background-size: 120% 750px;
 	position: absolute;
-  top: 0px;
+	top:0px;
 	left: 0px;
 }
 
 register-page .full-name, .username, .email, .password, .repeat-password {
-  background-color: rgba(255, 0, 0, 0);
+    background-color: rgba(255, 0, 0, 0);
     border-bottom: 1px solid white;
     color: white;
 }
@@ -43,8 +42,8 @@ register-page .register ion-input {
 }
 
 register-page .register-button {
-  margin-top: 30px;
-  margin-bottom: 15px;
+  margin-top: 35px;
+  margin-bottom: 40px;
   width: 60%;
 	border: 1px solid #FFF;
   border-radius: 5px;
@@ -90,6 +89,7 @@ register-page .facebookSU-button-wrapper {
   width: 100%;
   text-align: center;
   margin-top: 15px;
+  margin-bottom: 10px;
 }
 
 register-page .facebookSU-button i {

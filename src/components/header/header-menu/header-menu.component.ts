@@ -8,7 +8,7 @@ import { MessageBus } from '../../../services/message-bus.service';
 })
 export class HeaderMenuComponent {
     public headerMenuItems: any[];
-    public name: string;
+    public name: string = '';
 
     constructor(private menuDataService: MenuDataService, private messageBus: MessageBus) {
         this.menuDataService.getData('header').subscribe(
@@ -16,7 +16,10 @@ export class HeaderMenuComponent {
                 this.headerMenuItems = data;
             }
         );
-        this.name = JSON.parse(localStorage.getItem('user')).name; 
+        const user = JSON.parse(localStorage.getItem('user'));
+        if(user) {
+          this.name = user.name;
+        }
     }
 
     public logout(): void {
