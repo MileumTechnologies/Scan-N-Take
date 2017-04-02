@@ -16,6 +16,7 @@ export class LoginService {
     return this.http.post(this.loginURL, body)
                     .map((res: any) => {
                       let response = JSON.parse(res._body.substring(res._body.indexOf('{'), res._body.length));
+                      localStorage.setItem('user', JSON.stringify(response));
                       return response;
                     });
   }
