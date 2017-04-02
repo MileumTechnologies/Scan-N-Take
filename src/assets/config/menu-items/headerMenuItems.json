@@ -4,21 +4,21 @@
 		"hr": ""
 	},
 	"page": "account",
-	"imgUrl": ""
+	"icon": ""
 }, {
 	"name": {
 		"en": "Billing",
 		"hr": ""
 	},
 	"page": "billing",
-	"imgUrl": ""
+	"icon": "cash"
 }, {
 	"name": {
 		"en": "Language",
 		"hr": ""
 	},
 	"page": "language",
-	"imgUrl": ""
+	"icon": ""
 }, {
 	"name": {
 		"en": "Settings",
@@ -29,7 +29,7 @@
 		"hr": ""
 	},
 	"page": "settings",
-	"imgUrl": ""
+	"icon": ""
 }, {
 	"name": {
 		"en": "Help",
@@ -40,7 +40,7 @@
 		"hr": ""
 	},
 	"page": "help",
-	"imgUrl": ""
+	"icon": "cash"
 }, {
 	"name": {
 		"en": "Feedback",
@@ -51,11 +51,11 @@
 		"hr": ""
 	},
 	"page": "feedback",
-	"imgUrl": ""
+	"icon": ""
 }, {
 	"name": {
 		"en": "Logout"
 	},
-	"imgUrl": "",
+	"icon": "",
 	"page": "logout"
 }]

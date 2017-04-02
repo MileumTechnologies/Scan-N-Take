@@ -10,7 +10,7 @@ import { MessageBus } from '../../services/message-bus.service';
 export class HeaderPage {
     private navCtrl: any;
 
-    constructor(private app: App, private router: RouterService, private messageBus: MessageBus) { }
+    constructor(private app: App, private messageBus: MessageBus) { }
 
     ngAfterViewInit() {
         this.navCtrl = this.app.getRootNav();
@@ -54,9 +54,5 @@ export class HeaderPage {
         if (localStorage.getItem('id'))
             return true;
         return false;
-    }
-
-    nesto() {
-        
     }
 }
