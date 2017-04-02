@@ -5,7 +5,7 @@
             {{ message }}
         </article>
         <div class="btn-group">
-            <div class='btn' *ngFor="let button of buttons; let i = index">
+            <div [ngClass]="{'btn': buttons.length == 1, 'btn2': buttons.length > 1}" *ngFor="let button of buttons; let i = index">
                 <div (click)='buttonClick(button)'>
                     {{ button }}
                     <p *ngIf="i < buttons.length - 1">|</p>
