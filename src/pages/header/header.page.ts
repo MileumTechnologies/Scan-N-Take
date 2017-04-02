@@ -51,7 +51,7 @@ export class HeaderPage {
     }
 
     userLoggedIn(): boolean {
-        if (localStorage.getItem('id'))
+        if (localStorage.getItem('user'))
             return true;
         return false;
     }

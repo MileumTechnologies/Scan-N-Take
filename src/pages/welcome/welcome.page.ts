@@ -13,7 +13,7 @@ export class WelcomePage implements OnInit {
     constructor(private navController: NavController, private routerService: RouterService, private messageBus: MessageBus) { }
 
     ngOnInit() {
-        if (localStorage.getItem('id')) {
+        if (localStorage.getItem('user')) {
             this.messageBus.emit({ command: 'changeAppRootPage', data: 'home' });
         }
     }

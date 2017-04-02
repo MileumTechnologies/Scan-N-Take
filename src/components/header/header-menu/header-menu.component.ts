@@ -22,9 +22,4 @@ export class HeaderMenuComponent {
         }
     }
 
-    public logout(): void {
-      localStorage.removeItem('id');
-      this.messageBus.emit({ command: 'changeAppRootPage', data: 'welcome' });
-    }
-
 }
