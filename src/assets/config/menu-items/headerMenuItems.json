@@ -4,21 +4,21 @@
 		"hr": ""
 	},
 	"page": "account",
-	"icon": ""
+	"icon": "fa fa-user-o"
 }, {
 	"name": {
 		"en": "Billing",
 		"hr": ""
 	},
 	"page": "billing",
-	"icon": "cash"
+	"icon": "fa fa-money"
 }, {
 	"name": {
 		"en": "Language",
 		"hr": ""
 	},
 	"page": "language",
-	"icon": ""
+	"icon": "fa fa-language"
 }, {
 	"name": {
 		"en": "Settings",
@@ -29,18 +29,14 @@
 		"hr": ""
 	},
 	"page": "settings",
-	"icon": ""
+	"icon": "fa fa-cog"
 }, {
 	"name": {
 		"en": "Help",
 		"hr": ""
 	},
-	"description": {
-		"en": "",
-		"hr": ""
-	},
 	"page": "help",
-	"icon": "cash"
+	"icon": "fa fa-info-circle"
 }, {
 	"name": {
 		"en": "Feedback",
@@ -51,11 +47,11 @@
 		"hr": ""
 	},
 	"page": "feedback",
-	"icon": ""
+	"icon": "fa fa-star-o"
 }, {
 	"name": {
 		"en": "Logout"
 	},
-	"icon": "",
+	"icon": "fa fa-sign-out",
 	"page": "logout"
 }]

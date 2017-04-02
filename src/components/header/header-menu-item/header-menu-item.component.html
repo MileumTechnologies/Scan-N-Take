@@ -1,3 +1,4 @@
 <ion-item class='item' (click)='goToPage(itemData?.page)' menuClose>
+<i [ngClass]='itemData?.icon'></i>
     {{ itemData?.name?.en }}
 </ion-item>
