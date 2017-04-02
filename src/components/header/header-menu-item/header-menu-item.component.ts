@@ -8,6 +8,7 @@ import { MessageBus } from '../../../services/message-bus.service';
 export class HeaderMenuItemComponent {
     @Input() itemData: any;
 
+
     constructor(private messageBus: MessageBus) {}
 
     goToPage(page: string) {
@@ -16,6 +17,6 @@ export class HeaderMenuItemComponent {
 
     logout() {
     	localStorage.removeItem("id");
-    	this.messageBus.emit({ command: 'changeAppRootPage', data: 'welcome' });
+        setTimeout(() => this.messageBus.emit({ command: 'changeAppRootPage', data: 'welcome' }), 500);
     }
 }
