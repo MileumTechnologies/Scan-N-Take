@@ -19,7 +19,8 @@ export class HeaderMenuItemComponent {
     public logout(): void {
         setTimeout(() => {
             localStorage.removeItem('user');
-            this.messageBus.emit({ command: 'changeAppRootPage', data: 'welcome' });
+            // this.messageBus.emit({ command: 'changeAppRootPage', data: 'welcome' });
+            location.reload();
         }, 100);
     }
 }

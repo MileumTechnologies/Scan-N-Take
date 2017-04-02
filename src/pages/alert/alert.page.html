@@ -1,15 +1,13 @@
-<div class="w3-animate-zoom" *ngIf="show">
+<div class="w3-animate-opacity" *ngIf="show">
     <section class="box">
         <h2> {{ title }} </h2>
         <article>
             {{ message }}
         </article>
         <div class="btn-group">
-            <div [ngClass]="{'btn': buttons.length == 1, 'btn2': buttons.length > 1}" *ngFor="let button of buttons; let i = index">
-                <div (click)='buttonClick(button)'>
+            <div [ngClass]="{'w-100': buttons.length == 1, 'w-50': buttons.length > 1}" *ngFor="let button of buttons; let i = index" (click)='buttonClick(button)'>
                     {{ button }}
                     <p *ngIf="i < buttons.length - 1">|</p>
-                </div>
             </div>
         </div>
     </section>
