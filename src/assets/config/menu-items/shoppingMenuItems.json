@@ -18,7 +18,7 @@
 		"en": "Create your buy list.",
 		"hr": ""
 	},
-	"page": "DiscountsPage",
+	"page": "buy-list",
 	"imgUrl": "assets/shopping-menu-backgrounds/buylist.jpg"
 }, {
 	"name": {

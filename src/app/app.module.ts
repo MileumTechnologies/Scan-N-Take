@@ -18,6 +18,7 @@ import { SettingsPage } from '../pages/settings/settings.page';
 import { HelpPage } from '../pages/help/help.page';
 import { FeedbackPage } from '../pages/feedback/feedback.page';
 import { ShoppingCartPage } from '../pages/shopping-cart/shopping-cart.page';
+import { BuyListPage } from '../pages/buy-list/buy-list.page';
 
 // Components
 import { AlertComponent } from '../pages/alert/alert.page';
@@ -67,7 +68,8 @@ import { ProductDetailsService } from '../services/product-details.service';
         FeedbackPage,
         ShoppingCartListComponent,
         ShoppingCartListItemComponent,
-        ItemScannerComponent
+        ItemScannerComponent,
+        BuyListPage
     ],
     imports: [
         IonicModule.forRoot(MyApp)
@@ -98,7 +100,8 @@ import { ProductDetailsService } from '../services/product-details.service';
         FeedbackPage,
         ShoppingCartListComponent,
         ShoppingCartListItemComponent,
-        ItemScannerComponent
+        ItemScannerComponent,
+        BuyListPage
     ],
     providers: [
         Storage, RouterService, RegisterService, LoginService, AlertService, MessageBus, MenuDataService, BarcodeScanner, ProductDetailsService,

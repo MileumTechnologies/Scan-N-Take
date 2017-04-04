@@ -17,6 +17,7 @@ import { SettingsPage } from '../pages/settings/settings.page';
 import { HelpPage } from '../pages/help/help.page';
 import { FeedbackPage } from '../pages/feedback/feedback.page'
 import { ShoppingCartPage } from '../pages/shopping-cart/shopping-cart.page';
+import { BuyListPage } from '../pages/buy-list/buy-list.page';
 // Components
 
 // Services
@@ -133,7 +134,10 @@ export class MyApp {
                 localStorage.removeItem("id");
               //  this.changeAppRootPage('home');
                 break;
-            } 
+            }
+            case 'buy-list': {
+                this.nav.push(BuyListPage);
+            }
 
         }
     }
