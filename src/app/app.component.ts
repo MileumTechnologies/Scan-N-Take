@@ -131,7 +131,7 @@ export class MyApp {
               break;
             }
             case 'logout': {
-                localStorage.removeItem("id");
+                localStorage.removeItem('user');
               //  this.changeAppRootPage('home');
                 break;
             }
@@ -143,6 +143,6 @@ export class MyApp {
     }
 
     loggedIn(): boolean {
-      return localStorage.getItem('id') != null;
+      return localStorage.getItem('user') != null;
     }
 }

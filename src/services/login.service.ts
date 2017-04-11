@@ -9,7 +9,7 @@ export class LoginService {
   // private logoutURL: string = 'https://www.lucklycreative.com/api/login/logout.php';
 
   constructor(private http: Http, private storage: Storage) {}
-  
+
   public login(user): Observable<any> {
     let body = JSON.stringify(user);
 
@@ -23,7 +23,7 @@ export class LoginService {
 
   public logout(id: number) {
     // let body = JSON.stringify({ id: id });
-    this.storage.remove('id');
+    this.storage.remove('user');
     location.reload();
 	// TODO: Add link to logout.php to track user's logged in time
     // return this.http.post(this.logoutURL, body)

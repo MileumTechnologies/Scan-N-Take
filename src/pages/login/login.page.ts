@@ -91,7 +91,7 @@ export class LoginPage {
                         // });
                         // alert.present();
 
-                        localStorage.setItem('id', response.id);
+                        // localStorage.setItem('id', response.id);
                         this.redirectToHome();
                     } else if (response.verified == 0) {
                         let alertData = {

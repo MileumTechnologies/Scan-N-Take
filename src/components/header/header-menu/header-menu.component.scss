@@ -14,7 +14,7 @@ header-menu .item-profile {
  	height: 80px;
 }
 header-menu .item-profile-inner {
-	border-bottom: none; 	
+	border-bottom: none;
 }
 header-menu .item-profile .img-circle {
 	height: 20%;
@@ -24,11 +24,11 @@ header-menu .item-profile .img-circle {
 	padding-right: 5px;
 	width: 20%;
 	border-radius: 50% !important;
+	background-color: white;
 }
 header-menu .item-profile .profile {
 	position: absolute;
 	left: 85px;
-	top: 30px;
+	top: 25px;
 	font-size: 20px;
 }
-

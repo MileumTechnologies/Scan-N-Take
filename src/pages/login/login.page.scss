@@ -1,5 +1,5 @@
 login-page .login-form-wrapper {
-  margin-top: 130px;
+  margin-top: 150px;
 }
 
 login-page .form-background {
@@ -8,7 +8,6 @@ login-page .form-background {
   background: rgba(0, 0, 0, 0.65);
   text-align: center;
   margin: auto;
-  margin-top: 100px;
 }
 
 login-page .login {
@@ -55,8 +54,8 @@ login-page .login-button-wrapper {
 }
 
 login-page .login-button {
-  margin-top: 30px;
-  margin-bottom: 10px;
+  margin-top: 35px;
+  margin-bottom: 40px;
   width: 60%;
 	border: 1px solid #FFF;
   border-radius: 5px;
@@ -83,13 +82,14 @@ login-page .register-link-wrapper {
 
 login-page .input-wrapper {
   display: block;
+  padding-top: 10px;
 }
 
 login-page .background {
 	background-image: url("../assets/background/background.jpg");
 	background-repeat: no-repeat;
-	background-size: 100% 100%;
+	background-size: 120% 750px;
 	position: absolute;
-  top: 0px;
+	top:0px;
 	left: 0px;
 }

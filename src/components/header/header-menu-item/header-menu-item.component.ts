@@ -11,12 +11,16 @@ export class HeaderMenuItemComponent {
 
     constructor(private messageBus: MessageBus) {}
 
-    goToPage(page: string) {
+    public goToPage(page: string) {
+        if(page === 'logout') return this.logout();
         this.messageBus.emit({ command: 'changeAppPage', data: page });
     }
 
-    logout() {
-    	localStorage.removeItem("id");
-        setTimeout(() => this.messageBus.emit({ command: 'changeAppRootPage', data: 'welcome' }), 500);
+    public logout(): void {
+        setTimeout(() => {
+            localStorage.removeItem('user');
+            // this.messageBus.emit({ command: 'changeAppRootPage', data: 'welcome' });
+            location.reload();
+        }, 100);
     }
 }
