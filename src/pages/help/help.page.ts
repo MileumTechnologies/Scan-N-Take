@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
 })
 
 export class HelpPage {
-	title: string = 'Help Page';
+	static title: string = 'Help Page';
+	public questions: any[] = [];
+
+	constructor() {
+		
+	}
 }
