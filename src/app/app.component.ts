@@ -41,16 +41,12 @@ export class MyApp {
     }
 
     ngOnInit() {
-        // Change root page subscription
-        // this.routerService.getChangeRootEmitter().subscribe(
-        //     newRootPage => this.changeAppRootPage(newRootPage)
-        // );
         this.messageBus.subscribe(
             (message) => {
-                if(message.command === 'changeAppRootPage') {
+                if (message.command === 'changeAppRootPage') {
                     this.changeAppRootPage(message.data);
                 }
-                else if(message.command === 'changeAppPage') {
+                else if (message.command === 'changeAppPage') {
                     this.changeAppPage(message.data);
                 }
                 console.log('Message received: ', message);
@@ -58,91 +54,74 @@ export class MyApp {
         )
     }
 
-    ngOnDestroy() {
-        this.routerService.getChangeRootEmitter().unsubscribe();
-    }
-
     private changeAppRootPage(newRootPage: string): void {
 
         switch (newRootPage) {
-            case 'login': {
+            case 'login':
                 this.rootPage = LoginPage;
                 break;
-            }
-            case 'register': {
+            case 'register':
                 this.rootPage = RegisterPage;
                 break;
-            }
-            case 'welcome': {
+            case 'welcome':
                 this.rootPage = WelcomePage;
                 break;
-            }
-            case 'home': {
+            case 'home':
                 this.rootPage = HomePage;
                 break;
-            }
-            default: {
+            default:
                 this.rootPage = ErrorPage;
-            }
         }
     }
 
     private changeAppPage(newPage: string): void {
 
-        switch(newPage) {
-            case 'login': {
+        switch (newPage) {
+            case 'login':
                 this.nav.push(LoginPage);
                 break;
-            }
-            case 'register': {
+            case 'register':
                 this.nav.push(RegisterPage);
                 break;
-            }
-            case 'shopping': {
+            case 'shopping':
                 this.nav.push(ShoppingPage);
                 break;
-            }
-            case 'account': {
+            case 'account':
                 this.nav.push(AccountPage);
                 break;
-            }
-            case 'billing': {
+            case 'billing':
                 this.nav.push(BillingPage);
                 break;
-            }
-            case 'language': {
+            case 'language':
                 this.nav.push(LanguagePage);
                 break;
-            }
-            case 'settings': {
+            case 'settings':
                 this.nav.push(SettingsPage);
                 break;
-            }
             case 'help': {
                 this.nav.push(HelpPage);
                 break;
             }
-            case 'feedback': {
+            case 'feedback':
                 this.nav.push(FeedbackPage);
                 break;
-            }
-            case 'shopping-cart': {
-              this.nav.push(ShoppingCartPage);
-              break;
-            }
-            case 'logout': {
-                localStorage.removeItem('user');
-              //  this.changeAppRootPage('home');
+            case 'shopping-cart':
+                this.nav.push(ShoppingCartPage);
                 break;
-            }
-            case 'buy-list': {
+            case 'buy-list':
                 this.nav.push(BuyListPage);
-            }
+                break;
+            default: 
+                this.nav.push(ErrorPage);
 
         }
     }
 
-    loggedIn(): boolean {
-      return localStorage.getItem('user') != null;
+    public loggedIn(): boolean {
+        return localStorage.getItem('user') != null;
+    }
+
+    public logout(): void {
+
     }
 }
