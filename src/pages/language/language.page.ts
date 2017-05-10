@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
 })
 
 export class LanguagePage {
-	title: string = 'Language page';
+	static title: string = 'Language';
 }
