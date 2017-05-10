@@ -1,13 +1,13 @@
 language-page {
-	margin-top: 50px;
+	margin-top: 65px;
 }
-language-page ul {
-	list-style-type: none;
+language-page ion-label {
+	position: relative;
+	top: 5px;
 }
-language-page img {
+language-page ion-avatar {
 	padding-right: 10px;
 	height: 30px;
-	width: 40px;
+	width: 60px;
 	position: relative;
-	top: 3px;
 }
