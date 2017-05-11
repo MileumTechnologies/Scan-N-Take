@@ -7,6 +7,7 @@ export class MenuDataService {
     private homeMenuDataUrl = 'assets/config/menu-items/homeMenuItems.json';
     private shoppingMenuDataUrl = 'assets/config/menu-items/shoppingMenuItems.json';
     private headerMenuDataUrl = 'assets/config/menu-items/headerMenuItems.json';
+    private languageMenuDataUrl = 'assets/config/menu-items/languageMenuItems.json';
 
     constructor(private http: Http) {}
 
@@ -21,6 +22,9 @@ export class MenuDataService {
                 break;
             case 'header':
                 url = this.headerMenuDataUrl;
+                break;
+            case 'language':
+                url = this.languageMenuDataUrl;
                 break;
         }
 
