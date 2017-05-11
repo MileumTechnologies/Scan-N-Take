@@ -31,6 +31,8 @@ import { ShoppingMenuItemComponent } from '../components/shopping/shopping-menu-
 import { ShoppingCartListComponent } from '../components/shopping-cart/shopping-cart-list/shopping-cart-list.component';
 import { ShoppingCartListItemComponent } from '../components/shopping-cart/shopping-cart-list-item/shopping-cart-list-item.component';
 import { ItemScannerComponent } from '../components/item-scanner/item-scanner.component';
+import { LanguageMenuComponent } from '../components/language/language-menu/language-menu.component';
+import { LanguageMenuItemComponent } from '../components/language/language-menu-item/language-menu-item.component';
 
 // Services
 import { RouterService } from '../services/router.service';
@@ -69,7 +71,9 @@ import { ProductDetailsService } from '../services/product-details.service';
         ShoppingCartListComponent,
         ShoppingCartListItemComponent,
         ItemScannerComponent,
-        BuyListPage
+        BuyListPage,
+        LanguageMenuComponent,
+        LanguageMenuItemComponent
     ],
     imports: [
         IonicModule.forRoot(MyApp)
@@ -101,7 +105,9 @@ import { ProductDetailsService } from '../services/product-details.service';
         ShoppingCartListComponent,
         ShoppingCartListItemComponent,
         ItemScannerComponent,
-        BuyListPage
+        BuyListPage,
+        LanguageMenuComponent,
+        LanguageMenuItemComponent
     ],
     providers: [
         Storage, RouterService, RegisterService, LoginService, AlertService, MessageBus, MenuDataService, BarcodeScanner, ProductDetailsService,
